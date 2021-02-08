@@ -4,6 +4,8 @@ import styled, { keyframes } from "styled-components";
 import axios from "axios";
 import HeaderText from "./styledComponents/HeaderText";
 import { COLORS } from "./styles/styles";
+import MojsExample from "./Components/MojsExample";
+
 
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
           <HeaderText fSize="default">Victor Gervacio</HeaderText>
           <HeaderText fSize="small">Contact</HeaderText>
           <HeaderText fSize="small"><HoverText><Icon name="linkedin"><a href="https://www.linkedin.com/in/victorgervacio/">victorgervacio</a></Icon></HoverText></HeaderText>
-          <HeaderText fSize="small"><Icon name="mail">victorgervacio33@gmail.com</Icon></HeaderText>
+         <HeaderText fSize="small"><Icon name="mail">victorgervacio33@gmail.com</Icon></HeaderText>
           <HeaderText fSize="small"> <Icon name="phone">(435)7091779</Icon></HeaderText>
        </Segment>
        <Segment as={Transparent}>
