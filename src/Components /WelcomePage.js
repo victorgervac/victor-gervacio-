@@ -75,11 +75,14 @@ header:{
     lineHeight: "1em"
   },
   sidebarText:{
+    color:"white",
+    fontSize: "70px",
+    textTransform: "uppercase",
+    margin: "0",
+    
     position: "absolute",
-    top: "28%",
-    right: "43%",
-    // transform: "translate(-50%, -50%)",
-    fontSize: "40px",
+    top: "5%",
+    right: "5%",
     color: "transparent",
     WebkitTextStroke: "2px rgb(165, 165, 165)"
   },
