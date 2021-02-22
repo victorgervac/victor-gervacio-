@@ -5,9 +5,10 @@ import axios from "axios";
 import HeaderText from "./styledComponents/HeaderText";
 import { COLORS } from "./styles/styles";
 import ModalAbout from "./Components /ModalAbout";
+import FadeIn from "./Components /FadeIn"
 import { Switch, Route } from "react-router-dom";
-import { Container } from "semantic-ui-react";
-import MojsExample from "./Components /MojsExample";
+
+
 
 const PortfolioMain = () => { 
   const [show, setShow] = useState(false);
@@ -97,7 +98,7 @@ const PortfolioMain = () => {
 }
 
 const styles = {
-    center:{
+  center:{
       alignItems: "center",
     },
      card:{

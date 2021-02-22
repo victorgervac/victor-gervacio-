@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import spiningBall from "../LiveBackground/spiningBall.gif"
 import {Link} from "react-router-dom"
 import "./Welcome.css"
+import FadeIn from "./FadeIn"
 
 
 
@@ -15,6 +16,7 @@ const WelcomePage = () =>{
 
     return (
         <body class="body">
+        <FadeIn wrapperElement="h1" direction="down">
             <div class="wrapper">
             <div class="loader"></div>
             </div>
@@ -22,26 +24,33 @@ const WelcomePage = () =>{
 
                 {/* animated image  */}
                 <div class="wrapper-img">
+                <FadeIn wrapperElement="h1" direction="down">
                     <div class="box"></div>
                     <div>
                         <img src={spiningBall} alt="ball image" />
                     </div>
+                </FadeIn>
                 </div>
 
                 {/* header */}
                 <div style={styles.header}>
+                <FadeIn direction="right">
                     <h1 style={styles.headerhH1}>Victor</h1>
                     <h1 style={styles.headerhH1}>Gervacio</h1>
+                </FadeIn>
                 </div>
                 
                 {/* <!-- hero-container  --> */}
                 <div class="hero-container">
                 <div style={styles.sidebarText}>WELCOME</div>
+                <FadeIn direction="right">
                 <Link to="/portfolio">
                 <div class="click" style={styles.portfolio}>Portfolio</div>
                 </Link>
+                </FadeIn>
                 </div>
             </div>
+        </FadeIn>
         </body>
     )
 }
@@ -67,9 +76,9 @@ header:{
   },
   sidebarText:{
     position: "absolute",
-    top: "30%",
-    right: "27%",
-    transform: "translate(-50%, -50%)",
+    top: "28%",
+    right: "43%",
+    // transform: "translate(-50%, -50%)",
     fontSize: "40px",
     color: "transparent",
     WebkitTextStroke: "2px rgb(165, 165, 165)"
