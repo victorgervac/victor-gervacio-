@@ -47,15 +47,15 @@ const PortfolioMain = () => {
         <HeaderText fSize="small">Experience</HeaderText>
         <span><a href="https://amazingdevtracker.herokuapp.com" target="_blank" style={styles.portfolio}><Icon name="globe"></Icon>DevTracker: </a>
         <span style={styles.paragraph}>
-        This app was created  in an agile environment with two team mates and myself, i consider this the ultimate TODO list to help your job search, with the following techonologies. Front-end we used jsx with node and 
-        yarn dependencies among other drag and drop,router and devise libraries in a componenet set up. Ruby on rails was used for our back-end different Gems were 
-        used to facilaitate the development with relational database PostgresSQL.
+        This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
+        <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
+        <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilaitate the development with PostgresSQL relational database.
         </span>
         </span>
         <a style={styles.portfolio} href="https://github.com/victorgervac" target="_blank"><Icon name="github"></Icon>Github:</a>
         <span style={styles.paragraph}>
-            My github has activity of repos which represent meterial i have learned and still learning. you can load the repos by clicking the button or fallow the green link 
-            to se my activty and explore more.
+            My github contains the repositories that represent content that I have created and still developing. You can load the repositories by clicking the button below or following the green link 
+            to see my activty and explore more.
           
         </span>
         < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
