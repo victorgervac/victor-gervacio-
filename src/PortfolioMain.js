@@ -46,18 +46,27 @@ const PortfolioMain = () => {
        </Segment>
        <Segment as={Transparent}>
         <HeaderText fSize="small">Experience</HeaderText>
-        <span><a href="https://amazingdevtracker.herokuapp.com" target="_blank" style={styles.portfolio}><Icon name="globe"></Icon>DevTracker: </a>
-        <span style={styles.paragraph}>
-        This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
-        <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
-        <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilaitate the development with PostgresSQL relational database.
-        </span>
+        <span>
+            <a href="https://clone-9de46.web.app/" target="_blank" style={styles.portfolio}> <Icon name="amazon"></Icon>Amazon-Clone:</a></span>
+            <span style={styles.paragraph}>
+            I have created a clone to the Amazon store to test out my javascripts developer skills, while writing JSX in the react framework. 
+            Follow the link to open the up the app, and login with a google account. while being protected by google's firebase cloud database.
+            <br></br><br></br>•Backend: Firebase Realtime cloud-hosted database.
+            <br></br><br></br>•Front-end: Firebase tools, React Dom, React Number Format,React Router Dom, Styled Components.
+
+            </span>
+        <span>
+            <a href="https://amazingdevtracker.herokuapp.com" target="_blank" style={styles.portfolio}><Icon name="globe"></Icon>DevTracker: </a>
+            <span style={styles.paragraph}>
+            This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
+            <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
+            <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilitate the development with PostgresQL relational database.
+            </span>
         </span>
         <a style={styles.portfolio} href="https://github.com/victorgervac" target="_blank"><Icon name="github"></Icon>Github:</a>
-        <span style={styles.paragraph}>
+            <span style={styles.paragraph}>
             My github contains the repositories that represent content that I have created and still developing. You can load the repositories by clicking the button below or following the green link 
             to see my activty and explore more.
-          
         </span>
         < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
         <Grid>
