@@ -1,0 +1,163 @@
+.container{
+  background-color: var(--main-bg-color);
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+/*nav .navigation #link-nav*/
+nav{
+  font-size: 12pt;
+  line-height: 18pt;
+  background:var(--darksea-color);
+  padding: 14px 16px;
+  width: 100%;
+  z-index: 99;
+  left: 0;
+  position: fixed;
+  top:0;
+}
+.icon .nav-link:hover{
+  color: var(--hover-nav-color);
+}
+.nav-link{
+  color: var(--white-color);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.5s;
+  font-size: initial;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+.icon{
+  display: none;
+  height: 0%;
+}
+#victor-link{
+  margin-left: 1rem;
+}
+/*the welcome svg and paragraph*/
+.landing-content{
+  display:flex;
+  margin: 2rem;
+  padding:70px;
+  height: 100vh;
+}
+.main-content{
+  display: flex;
+  flex-direction: row;
+}
+.name-line{
+  font-size: 36px !important;
+  font-stretch: extra-condensed;
+  
+}
+.name-line, .hello-line{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 12pt;
+  line-height: 18pt;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left:0rem;
+  
+}
+svg{
+  width: 50vh;
+  /* width: 100%;
+  padding: 5rem;
+  display: flex; */
+}
+/*color*/
+#hair{
+  fill:var(--hair-color)
+}
+#arm-hand, #body, #left-arm, #-arm-tablet{
+  fill: var(--shirt-color)
+}
+#handNumber, #left-hand, #face{
+  fill:var(--body-color)
+}
+#pants{
+  fill:var(--pants-color)
+} 
+#tablet{
+  fill:var(--pad-color)
+}
+#note-top1, #note-bottom2, #note-bottom1,#note-bottom0{
+  fill: var(--paper-color)
+}
+
+/*animation*/
+#tablet, #-arm-tablet, #left-hand,#left-arm{
+  animation: shake 20s infinite;
+}
+#arm-hand, #note-top1,#note-bottom2, #note-bottom1,#note-bottom0{
+  animation: paper-hand 10.85s infinite;
+}
+/*keyframes stuff*/
+@keyframes paper-hand {
+  50%{
+    transform:rotate(-45deg) translate(-123px, 90px); 
+    transform-origin: 0% 8%;
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/*media stuff screen stuff*/
+@media screen and (max-width: 470px) {
+  .container{
+    background-color: var(--phonelg-bg-color);
+  }
+  nav, .navigation{
+  background-color: var(--navsm-bg-color);
+  }
+  .nav-link{
+    display: none;
+    
+  }
+  .icon{
+    display: inline;
+    color: var(--white-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.5s;
+    font-size: initial;
+    margin: 1rem;
+  }
+  .about-realicon{
+    display: flex;
+    flex-direction:row;
+  }
+}
+
+/*idk yet*/
+:root {
+  --main-bg-color: #343b3f;
+  --selected-text-color: #212121;
+  --selected-text-bg-color: #aadc39;
+  --main-text-color: #fff;
+  --calendar-text-color: #f5f5f5;
+  --nav-footer-bg-color: rgba(37,37,37,0.98);
+  --small-padding: 1rem;
+  --med-margin: 1.2rem;
+  --twitter-brand: #1da1f2;
+  --dull-white: #c5c4bf;
+}

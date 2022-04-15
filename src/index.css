@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+:root {
+  --black-color:#00000C;
+  --white-color: #F2F2F2;
+  --navy-color: #2f2e41;
+  --darksea-color: #1b242f;
+  --gray-color:#50514F;
+  --nickel-color:#6E6F6E;
+  --quick-silver-color:#A2A29D;
+  --battleship-color: #898B88;
+  --hunter-green-color: #386641;
+  --may-green-color: #6A994E;
+  --bush-green-color: #9DBF9E;
+  --yellow-green-color: #CDD993;
+  --pale-spring-color:#E0E1B1;
+  --eggshell-green: #F2E8CF;
+  --beige-color: #F0D8BE;
+  --camel-color: #E8C1A3;
+  --bittersweet-red-color:#BC4749;
+  --red-color: #F25F5C;
+  --pink-color: #DC8888;
+  --pastel-red-color:#A74F6A;
+  --purple-color: #987284;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /*smaller variables*/
+  --phonemd-bg-color:var(--bittersweet-red-color);
+  --phonelg-bg-color: var(--darksea-color);
+  --navsm-bg-color:var(--battleship-color);
+  /*normal variables*/
+  --main-bg-color: var(--gray-color);
+  --nav-bar-color: var(--darksea-color);
+  --hover-nav-color: var(--hunter-green-color);
+
+
+  /*svg color var*/
+  --body-color:var(--camel-color);
+  --shirt-color: var(--pastel-red-color);
+  --pants-color: var(--purple-color);
+  --hair-color:var(--black-color);  
+  --paper-color:var(--white-color);
+  --pad-color:var(--navy-color);
+
+  /*margins/flex*/
+  --spacing: 1rem;
 }

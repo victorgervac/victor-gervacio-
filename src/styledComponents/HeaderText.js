@@ -16,8 +16,6 @@ const fontSize = (size) => {
 // define this once and reuse many times
 const HeaderText = styled.h1`
   color: white !important;
-  text-align: center;
   font-size: ${(props) => fontSize(props.fSize)} !important;
 `;
-
 export default HeaderText;
