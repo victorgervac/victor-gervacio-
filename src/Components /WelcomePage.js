@@ -1,11 +1,13 @@
 import React, {useState} from "react"
 import  { ReactComponent as VictorMan1 } from '../assets/images/victor-man1.svg'
-import PortfolioMain from "../PortfolioMain"
 import AboutComponent from "./AboutComponent"
 import ContactComponent from "./ContactComponent"
 import Github from "./Github"
 import '../styles/WelcomePage.css'
+import '../styles/NavBarStyles.css'
 import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
+import NavBar from "./NavBar"
+import PastWork from "../PortfolioMain"
 //import {Link} from "react-router-dom"
 // import FadeIn from "./FadeIn"
 // import { devices } from "../styles/mediaQuery"
@@ -14,28 +16,12 @@ import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
 
 
 const WelcomePage = () =>{
-  //const [bgColour, setBgColour] = useState("#fafafa")
-  //const appStyles={
-    // height:"100vh",
-    // background:`${bgColour}`
-  //}
+ 
   return (
      <div className="container">
-        <nav className="navigation">
-            <a href="#svg-id" id="victor-link" className="nav-link">Victor</a>
-         
-            <a href="#contact-id" className="icon"id="contact-icon"><Icon name="envelope outline"></Icon></a>
-            <a href="#contact-id" id="contact" className="nav-link">Contact</a>
-
-            <a href="#past-work" className="icon" id="work-icon"><Icon name="code"></Icon></a>
-            <a href="#past-work" id="work-link" className="nav-link">Work</a>
-
-            <a href="#github" className="icon" id="github-icon"><Icon name="github"></Icon></a>
-            <a href="#github" id="github-link" className="nav-link">Github</a>
-
-            <a href="#about-id" className="icon" id="about-icon"><Icon className="about-realicon" name="user"></Icon></a>
-            <a href="#about-id" id="about" className="nav-link">About</a>
-        </nav>
+        <div>
+          <NavBar/>
+        </div>
         <div className="landing-content">
           <div className="main-content">
             <div className="hello-line">
@@ -54,7 +40,7 @@ const WelcomePage = () =>{
           <ContactComponent/>
         </div>
         <div id="past-work" className="past-work-component">
-          <PortfolioMain/>
+          <PastWork/>
         </div>
         <div id="github" className="github-component">
           <Github/>

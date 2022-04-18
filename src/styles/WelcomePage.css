@@ -3,38 +3,9 @@
   height: 100%;
   display:flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
-/*nav .navigation #link-nav*/
-nav{
-  font-size: 12pt;
-  line-height: 18pt;
-  background:var(--darksea-color);
-  padding: 14px 16px;
-  width: 100%;
-  z-index: 99;
-  left: 0;
-  position: fixed;
-  top:0;
-}
-.icon .nav-link:hover{
-  color: var(--hover-nav-color);
-}
-.nav-link{
-  color: var(--white-color);
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: color 0.5s;
-  font-size: initial;
-  margin: 1rem;
-  padding-top: 1rem;
-}
-.icon{
-  display: none;
-  height: 0%;
-}
-#victor-link{
-  margin-left: 1rem;
-}
+
 /*the welcome svg and paragraph*/
 .landing-content{
   display:flex;
@@ -65,10 +36,10 @@ nav{
   
 }
 svg{
-  width: 50vh;
-  /* width: 100%;
+  height:100vh;
+  width: 100%;
   padding: 5rem;
-  display: flex; */
+  display: flex;
 }
 /*color*/
 #hair{
@@ -121,32 +92,6 @@ svg{
     transform: translate3d(4px, 0, 0);
   }
 }
-/*media stuff screen stuff*/
-@media screen and (max-width: 470px) {
-  .container{
-    background-color: var(--phonelg-bg-color);
-  }
-  nav, .navigation{
-  background-color: var(--navsm-bg-color);
-  }
-  .nav-link{
-    display: none;
-    
-  }
-  .icon{
-    display: inline;
-    color: var(--white-color);
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: color 0.5s;
-    font-size: initial;
-    margin: 1rem;
-  }
-  .about-realicon{
-    display: flex;
-    flex-direction:row;
-  }
-}
 
 /*idk yet*/
 :root {
@@ -158,6 +103,7 @@ svg{
   --nav-footer-bg-color: rgba(37,37,37,0.98);
   --small-padding: 1rem;
   --med-margin: 1.2rem;
+  --larg-padding:1.5rem;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
 }
