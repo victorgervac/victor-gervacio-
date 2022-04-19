@@ -1,45 +1,107 @@
+html {
+  scroll-behavior: smooth;
+}
 .container{
   background-color: var(--main-bg-color);
   height: 100%;
   display:flex;
   flex-direction: column;
-  scroll-behavior: smooth;
 }
 
 /*the welcome svg and paragraph*/
 .landing-content{
-  display:flex;
-  margin: 2rem;
-  padding:70px;
-  height: 100vh;
-}
-.main-content{
-  display: flex;
-  flex-direction: row;
-}
-.name-line{
-  font-size: 36px !important;
-  font-stretch: extra-condensed;
-  
-}
-.name-line, .hello-line{
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  font-size: 12pt;
-  line-height: 18pt;
+  -webkit-font-smoothing: antialiased;
   color: #fff;
-  align-items: center;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
   display: flex;
+  flex-grow: 1;
+}
+.component-name{
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  box-sizing: inherit;
+  display: flex;
+  align-content: center;
   flex-direction: column;
   justify-content: center;
-  margin-left:0rem;
-  
+  margin-top: 48px;
+}
+.hello-line{
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  box-sizing: inherit;
+  margin: 0;
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  margin-bottom: 0.35em;
+  padding-right: 20%;
+}
+.dev-line{
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  box-sizing: inherit;
+  margin: 0;
+  font-size: 2.158rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+  margin-bottom: 0.35em;
+}
+.name-div{
+  color: var(--name-landing-color);
+  font-weight: bold;
+}
+.describe-line{
+  font-size: 1.75rem;
+
 }
 svg{
   height:100vh;
-  width: 100%;
-  padding: 5rem;
-  display: flex;
+  color: #fff;
+  box-sizing: inherit;
+  max-width: 90%;
+}
+@media screen and (max-width: 500px) {
+  svg{
+    display: none;
+  }
+  .component-name{
+    padding: 2rem 1.5rem 1.5rem 2rem;
+    height: 100vh;
+  }
+  .name-div{
+    color: var(--smallscreen-name-color);
+    font-weight: bold;
+  }
+  .describe-line{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 384px) and (min-width: 100px){
+  .icon{
+    overflow: hidden;
+    size: 1rem;
+    margin: 1rem;
+  }
 }
 /*color*/
 #hair{

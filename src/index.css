@@ -20,6 +20,7 @@
   --pink-color: #DC8888;
   --pastel-red-color:#A74F6A;
   --purple-color: #987284;
+  --hotmess-pink-color: #E31B6D;
 
   /*smaller variables*/
   --phonemd-bg-color:var(--bittersweet-red-color);
@@ -29,6 +30,10 @@
   --main-bg-color: var(--gray-color);
   --nav-bar-color: var(--darksea-color);
   --hover-nav-color: var(--hunter-green-color);
+  --name-landing-color: var(--purple-color);
+  --smallscreen-name-color:var(--pink-color);
+  --connect-link-color: var(--white-color);
+  --title-header-color: var(--may-green-color);
 
 
   /*svg color var*/

@@ -5,9 +5,8 @@ import ContactComponent from "./ContactComponent"
 import Github from "./Github"
 import '../styles/WelcomePage.css'
 import '../styles/NavBarStyles.css'
-import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
 import NavBar from "./NavBar"
-import PastWork from "../PortfolioMain"
+import PastWork from "../PastWork"
 //import {Link} from "react-router-dom"
 // import FadeIn from "./FadeIn"
 // import { devices } from "../styles/mediaQuery"
@@ -16,21 +15,35 @@ import PastWork from "../PortfolioMain"
 
 
 const WelcomePage = () =>{
- 
+ const [userName, setUserName] = useState('');
+
+//  const MyName(props){
+//    console.log("hello")
+//  }
   return (
      <div className="container">
-        <div>
+        <div className="naviagtion-component">
           <NavBar/>
         </div>
         <div className="landing-content">
-          <div className="main-content">
+          <div className="component-name">
             <div className="hello-line">
-              Hello, I'm
-              <h1 className="name-line">Victor</h1>
+               Hello, I'm 
+              <div className="name-div">
+                Victor
+              </div>
+            </div>
+            <div class="dev-line">
               I'm a Front-End Developer
             </div>
+            <div className="describe-line">
+              who seeks the challenge of solving real world problems 
+              through coding in a team environment. Interested in all areas of
+              development including application 
+              front and back end work as well as testing and performance.
+            </div>
           </div>
-          <div className="component">
+          <div className="component-svg">
             <div id="svg-id" className="svg-component">
               <VictorMan1/>
             </div>

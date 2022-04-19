@@ -1,4 +1,4 @@
-nav{
+nav, .navigation-bar{
   font-size: 12pt;
   line-height: 18pt;
   background:var(--darksea-color);
@@ -8,6 +8,7 @@ nav{
   left: 0;
   position: fixed;
   top:0;
+  justify-content:center;
 }
 .icon .nav-link:hover{
   color: var(--hover-nav-color);
@@ -20,7 +21,6 @@ nav{
   font-size: initial;
   margin: 1rem;
   padding-top: 1rem;
-  scroll-behavior: smooth;
 }
 .icon{
   display: none;
@@ -28,7 +28,6 @@ nav{
 @media screen and (max-width: 500px) {
   .container{
     background-color: var(--phonelg-bg-color);
-    justify-content:center;
   }
   nav, .navigation{
     background-color: var(--navsm-bg-color);

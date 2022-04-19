@@ -1,0 +1,23 @@
+.component-header{
+  -webkit-font-smoothing: antialiased;
+  color: var(--title-header-color);
+  box-sizing: inherit;
+  margin-top: .75rem;
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+  text-align: left;
+  background: transparent !important;
+}
+.social-link{
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  margin-top: 0.875rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: var( --connect-link-color);
+  font-size: 1.25rem;
+  transition: color 0.5s;
+}
