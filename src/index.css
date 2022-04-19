@@ -21,7 +21,8 @@
   --pastel-red-color:#A74F6A;
   --purple-color: #987284;
   --hotmess-pink-color: #E31B6D;
-
+  --turquoise-color:#2FEFD0;
+  --max-width: 50ch;
   /*smaller variables*/
   --phonemd-bg-color:var(--bittersweet-red-color);
   --phonelg-bg-color: var(--darksea-color);
@@ -34,6 +35,10 @@
   --smallscreen-name-color:var(--pink-color);
   --connect-link-color: var(--white-color);
   --title-header-color: var(--may-green-color);
+  --description-words-color:var(--white-color);
+  --project-link-color:var(--turquoise-color);
+  /*styles var*/
+  --character-length: var(--max-width);
 
 
   /*svg color var*/
@@ -46,4 +51,5 @@
 
   /*margins/flex*/
   --spacing: 1rem;
+
 }

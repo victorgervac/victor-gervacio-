@@ -24,14 +24,14 @@ const Github=()=>{
 
   return (
     <div> 
-      <Segment>
+      <div>
      <a style={styles.portfolio} href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github:</a>
             <span style={styles.paragraph}>
             My github contains the repositories that represent content that I have created and still developing. You can load the repositories by clicking the button below or following the green link 
             to see my activty and explore more.
         </span>
         < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
-      </Segment>
+      </div>
     </div>
   )
 }

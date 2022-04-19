@@ -53,6 +53,7 @@ html {
   letter-spacing: -0.00833em;
   margin-bottom: 0.35em;
   padding-right: 20%;
+  max-width: var(--character-length);
 }
 .dev-line{
   -webkit-font-smoothing: antialiased;
@@ -65,6 +66,7 @@ html {
   line-height: 1.235;
   letter-spacing: 0.00735em;
   margin-bottom: 0.35em;
+  max-width: var(--character-length);
 }
 .name-div{
   color: var(--name-landing-color);
@@ -72,6 +74,7 @@ html {
 }
 .describe-line{
   font-size: 1.75rem;
+  max-width: var(--character-length);
 
 }
 svg{
