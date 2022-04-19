@@ -52,13 +52,13 @@ const PastWork = () => {
               </div>
             </div>
             <div  className="single-project">
-            <a className="project-tittle" href="https://amazingdevtracker.herokuapp.com" target="_blank" style={styles.portfolio} rel="noreferrer"><Icon name="globe"></Icon>DevTracker: </a>
-            <img src={DevTracker} className="projects-image" alt="Dev Tracker"></img>
-            <div style={styles.paragraph}>
-                This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
-                <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
-                <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilitate the development with PostgresQL relational database.
-            </div>
+              <a className="project-tittle" href="https://amazingdevtracker.herokuapp.com" target="_blank" style={styles.portfolio} rel="noreferrer"><Icon name="globe"></Icon>DevTracker: </a>
+              <img src={DevTracker} className="projects-image" alt="Dev Tracker"></img>
+              <div style={styles.paragraph}>
+                  This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
+                  <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
+                  <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilitate the development with PostgresQL relational database.
+              </div>
             </div>
           </div>
         <div>
