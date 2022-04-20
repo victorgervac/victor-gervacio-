@@ -3,7 +3,7 @@
 const AboutComponent =()=>{
   return (
     <div> 
-    <div className="modal-body" style={{fontSize: "1.5em"}}>
+    <div className="paragraph-descrition about">
                                     Hi I am Victor.  <br></br><br></br>I was raised in Acapulco, Mexico before moving to Utah.  
                                     Since then I have lived in Park City graduating from Park City High School in 2012 &
                                      attending Salt Lake Community College right after & completed a full-stack software developer certificate offered by the University of Utah.  <br></br>

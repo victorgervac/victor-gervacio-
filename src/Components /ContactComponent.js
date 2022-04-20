@@ -5,20 +5,22 @@ import styled  from "styled-components";
 
 const ContactComponent=()=>{
   return (
-    <div>
+    <div className="conect-wrap">
       <h1 className="component-header">Connect</h1>
+      <div className="link-wrap">
       <a href="https://www.linkedin.com/in/victorgervacio/" id="linkedin-social" className="social-link" target="blank">
         <Icon size='big' name="linkedin"></Icon>
         Victorgervacio
       </a>
       <a href="https://github.com/victorgervac" className="social-link" target="blank" >
         <Icon size='big' name="github"></Icon>
-        Github
+        victorgervac
       </a>
       <a href="mailto: victorgervacio33@gmail.com" className="social-link">
         <Icon size='big' name="mail"></Icon>
         victorgervacio33@gmail.com
       </a>
+      </div>
     </div>
   )
 }

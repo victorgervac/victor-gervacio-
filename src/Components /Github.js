@@ -3,6 +3,7 @@ import axios from "axios";
 import styled, { keyframes } from "styled-components";
 import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
 import { COLORS } from "../styles/styles";
+import "../styles/Github.css"
 
 const Github=()=>{
   const [repos, setRepos]= useState([]);
@@ -21,17 +22,50 @@ const Github=()=>{
         alert("error occuered getting repos");
         }
     }
+    const repoArrege =(repos)=>{
+      <Grid>
+      <Grid.Row>
+          {repos.map((r) => (
+            <Grid.Column key={r.id} width={5}>
+              {/* Not the most resuable */}
+              <Card style={styles.card}>
+                <Card.Content>
+                  <Card.Header style={{overflow:"hidden", textOverflow: "ellipsis"}}>
+                  {r.full_name}
+                  </Card.Header>
+                  <Card.Meta>{r.description}</Card.Meta>
+                  {r.stargazers_count > 0 && (
+                    <Star>
+                    <Icon name="star" />
+                  </Star>
+                    )}
+                </Card.Content>
+                <Card.Content extra>
+                  <ButtonLink href={r.html_url} target="_blank">
+                    View
+                  </ButtonLink>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          ))}
+        </Grid.Row>
+    </Grid>
+    }
 
   return (
     <div> 
       <div>
-     <a style={styles.portfolio} href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github:</a>
-            <span style={styles.paragraph}>
-            My github contains the repositories that represent content that I have created and still developing. You can load the repositories by clicking the button below or following the green link 
+        <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
+        <div className="paragraph-descrition github-paragraph">
+            My github contains the repositories that represent content that 
+            I have created and still developing. You can load the repositories 
+            by clicking the button below or following the green link 
             to see my activty and explore more.
-        </span>
-        < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
+        </div>
       </div>
+      <div className="button-wrap"> 
+        < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
+      </div> 
     </div>
   )
 }
@@ -44,15 +78,6 @@ const styles = {
       height: "120px",
       marginBottom: "10px",
      },
-     links:{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      color: "white",
-      fontSize:"1.5em",
-      marginBottom: "13px",
-      marginTop: "20px"
-      },
       portfolio:{
         fontWeight: "bold",
         fontSize:"1.5em",

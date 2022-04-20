@@ -13,35 +13,36 @@ import { Switch, Route } from "react-router-dom";
 
 
 const PastWork = () => { 
-  // const [repos, setRepos]= useState([]);
-
-  //   useEffect(()=>{
-  //   },[]);
-
-  //   async function getRepos() {
-  //       try {
-  //       const res = await axios.get(
-  //           `https://api.github.com/users/victorgervac/repos`
-  //       );
-  //       setRepos(res.data);
-  //       // console.log("called getRepos",res.data);
-  //       } catch (err) {
-  //       alert("error occuered getting repos");
-  //       }
-  //   }
-
     return (
     <div>
-      <div className="techSta-component">
+      <div className="techSta-component">   
         <div id="tech-stack" className="component-header">Tech Stack</div>
-        <div className="stack-description">JavaScript • React • Ruby on Rails </div>
+        <div className="stack">
+          <div className="stack-item javascript">
+            <Icon name="js">
+            </Icon>
+              JavaScript
+          </div>
+          <div className="stack-item react">
+            <Icon name="react">
+            </Icon>
+               React
+          </div>
+          <div className="stack-item ruby" >
+          <Icon name="diamond">
+          </Icon>
+            RubyonRails 
+        </div>
+        </div>
       </div>
       <div id="past-work" className="component-header">Past Work</div>
           <div className="projects">
             <div id="amzClone-component" className="single-project">
               <a className="project-tittle" href="https://clone-9de46.web.app/" target="_blank" rel="noreferrer"> <Icon name="amazon"></Icon>Amazon-Clone:</a>
               <div id="amzn-img-description" className="image-description">
+                <div className="image-wrap">
                 <img src={Amazoneclone} className="projects-image" alt="Amzone Clone"></img>
+                </div>
                 <div className="paragraph-descrition">
                     I have created a clone to the Amazon store to test out my javascripts developer skills,
                   <br></br>while writing JSX in the react framework. 
@@ -54,14 +55,18 @@ const PastWork = () => {
               </div>
             </div>
             <div  className="single-project">
-              <a className="project-tittle" href="https://amazingdevtracker.herokuapp.com" target="_blank" rel="noreferrer"><Icon name="globe"></Icon>DevTracker: </a>
-              <div id="dev-img-description" className="image-description">
-              <img src={DevTracker} className="projects-image" alt="Dev Tracker"></img>
-              <div className="paragraph-descrition" >
-                  This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
-                  <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
-                  <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilitate the development with PostgresQL relational database.
+              <div>
+                <a className="project-tittle" href="https://amazingdevtracker.herokuapp.com" target="_blank" rel="noreferrer"><Icon name="globe"></Icon>DevTracker: </a>
               </div>
+              <div id="dev-img-description" className="image-description reverse">
+                <div className="image-wrap">
+                  <img src={DevTracker} className="projects-image" alt="Dev Tracker"></img>
+                </div>
+                <div className="paragraph-descrition" >
+                    This app was created  in an agile environment with two team mates and myself. I consider this to be the ultimate TODO list to help your job search. This app was created  with the following techonologies.
+                    <br></br><br></br>• Front-end - jsx node, yarn dependencies, libraries like drag and drop, router and device in a component set up.
+                    <br></br><br></br>• Back-end - Ruby on rails, Gems were used to facilitate the development with PostgresQL relational database.
+                </div>
               </div>
             </div>
           </div>

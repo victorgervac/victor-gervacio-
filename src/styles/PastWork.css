@@ -1,11 +1,26 @@
-.stack-description{
+.stack{
+  display: flex;
+  font-size:2em;
+  margin-bottom:13px;
+  margin-top: 20px; 
+}
+.link-wrap{
+  margin-left: 1rem;
+}
+.stack-item{
+  margin: 1rem 1.25rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
-  font-size:1.5em;
-  margin-bottom: 13px;
-  margin-top: 20px;
+}
+.javascript{
+  color: yellow;
+}
+.react{
+  color:#5ED2F3;
+}
+.ruby{
+  flex-direction: row;
+  color:red;
 }
 .projects{
   display:flex;
@@ -20,13 +35,17 @@
   font-size:3.0em;
   color:var(--project-link-color);
   margin-top: 1rem;
+  margin-left: 1rem;
+}
+.image-wrap{
+  margin-bottom:1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .projects-image{
-  margin-left: 10px;
-  margin-right: auto;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
-  margin-bottom:1rem;
+
 }
 .paragraph-descrition{
   max-width: var(--character-length);
@@ -35,17 +54,26 @@
   margin-bottom: 28px;
   margin-top: 5px;
   margin-left:2rem;
+  margin-right: 2rem;
   line-height: 1.167;
   color:var(--description-words-color);
 }
-#dev-img-description{
-  display:flex;
-  flex-direction: row-reverse;
-}
+
 @media screen and (min-width: 838px){
   .image-description{
     display: flex;
   }
+  .reverse{
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 480px){
+    .stack{
+      display:block;
+    }
+    .stack-item{
+      justify-content: flex-start;
+    }
 }
 /* @media screen and (max-width: 974px){
       .projects{

@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+.box{
+  margin-bottom:1rem ;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 .container{
   background-color: var(--main-bg-color);
   height: 100%;

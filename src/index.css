@@ -26,6 +26,7 @@
   /*smaller variables*/
   --phonemd-bg-color:var(--bittersweet-red-color);
   --phonelg-bg-color: var(--darksea-color);
+  --componentbg-color:var(--battleship-color);
   --navsm-bg-color:var(--battleship-color);
   /*normal variables*/
   --main-bg-color: var(--gray-color);
@@ -41,6 +42,7 @@
   --character-length: var(--max-width);
 
 
+
   /*svg color var*/
   --body-color:var(--camel-color);
   --shirt-color: var(--pastel-red-color);
@@ -51,5 +53,4 @@
 
   /*margins/flex*/
   --spacing: 1rem;
-
 }

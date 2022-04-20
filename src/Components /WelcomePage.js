@@ -25,7 +25,7 @@ const WelcomePage = () =>{
         <div className="naviagtion-component">
           <NavBar/>
         </div>
-        <div className="landing-content">
+        <div className="landing-content box">
           <div className="component-name">
             <div className="hello-line">
                Hello, I'm 
@@ -43,22 +43,22 @@ const WelcomePage = () =>{
               front and back end work as well as testing and performance.
             </div>
           </div>
-          <div className="component-svg">
+          <div className="component-svg ">
             <div id="svg-id" className="svg-component">
               <VictorMan1/>
             </div>
           </div>
         </div>
-        <div id="contact-id" className="contact-component">
+        <div id="contact-id" className="contact-component box">
           <ContactComponent/>
         </div>
-        <div id="past-work" className="past-work-component">
+        <div id="past-work" className="past-work-component box">
           <PastWork/>
         </div>
-        <div id="github" className="github-component">
+        <div id="github" className="github-component box">
           <Github/>
         </div>
-        <div id="about-id" className="about-component">
+        <div id="about-id" className="about-component box">
          <AboutComponent/>
         </div>
       </div>
