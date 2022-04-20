@@ -58,7 +58,6 @@
   line-height: 1.167;
   color:var(--description-words-color);
 }
-
 @media screen and (min-width: 838px){
   .image-description{
     display: flex;
@@ -67,7 +66,7 @@
     flex-direction: row-reverse;
   }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 546px){
     .stack{
       display:block;
     }
