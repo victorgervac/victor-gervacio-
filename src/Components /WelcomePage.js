@@ -33,7 +33,7 @@ const WelcomePage = () =>{
                 Victor
               </div>
             </div>
-            <div class="dev-line">
+            <div className="dev-line">
               I'm a Front-End Developer
             </div>
             <div className="describe-line">

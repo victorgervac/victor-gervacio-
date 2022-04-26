@@ -1,71 +1,21 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import styled, { keyframes } from "styled-components";
 import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
 import { COLORS } from "../styles/styles";
 import "../styles/Github.css"
+import GithubCard from "./GithubCard";
+import { githubDescription } from "../data";
 
 const Github=()=>{
-  const [repos, setRepos]= useState([]);
-
-    useEffect(()=>{
-    },[]);
-
-    async function getRepos() {
-        try {
-        const res = await axios.get(
-            `https://api.github.com/users/victorgervac/repos`
-        );
-        setRepos(res.data);
-        // console.log("called getRepos",res.data);
-        } catch (err) {
-        alert("error occuered getting repos");
-        }
-    }
-    const repoArrege =(repos)=>{
-      <Grid>
-      <Grid.Row>
-          {repos.map((r) => (
-            <Grid.Column key={r.id} width={5}>
-              {/* Not the most resuable */}
-              <Card style={styles.card}>
-                <Card.Content>
-                  <Card.Header style={{overflow:"hidden", textOverflow: "ellipsis"}}>
-                  {r.full_name}
-                  </Card.Header>
-                  <Card.Meta>{r.description}</Card.Meta>
-                  {r.stargazers_count > 0 && (
-                    <Star>
-                    <Icon name="star" />
-                  </Star>
-                    )}
-                </Card.Content>
-                <Card.Content extra>
-                  <ButtonLink href={r.html_url} target="_blank">
-                    View
-                  </ButtonLink>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-          ))}
-        </Grid.Row>
-    </Grid>
-    }
-
-  return (
+    return (
     <div> 
       <div>
         <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
         <div className="paragraph-descrition github-paragraph">
-            My github contains the repositories that represent content that 
-            I have created and still developing. You can load the repositories 
-            by clicking the button below or following the green link 
-            to see my activty and explore more.
+          {githubDescription}
         </div>
+        <GithubCard/>
       </div>
-      <div className="button-wrap"> 
-        < ButtonRepo><Button onClick={getRepos}>Get Repos</Button></ ButtonRepo>
-      </div> 
     </div>
   )
 }

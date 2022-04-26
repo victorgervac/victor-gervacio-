@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Icon } from 'semantic-ui-react'
+import { Icon ,Card, Image } from 'semantic-ui-react'
 import "./styles/PastWork.css"
 import Amazoneclone from "./assets/images/Amazoneclone.png"
 import DevTracker from "./assets/images/DevTracker.png"
+import { projects } from "./data";
 import styled, { keyframes } from "styled-components";
 import axios from "axios";
 import HeaderText from "./styledComponents/HeaderText";
@@ -31,17 +32,34 @@ const PastWork = () => {
           <div className="stack-item ruby" >
           <Icon name="diamond">
           </Icon>
-            RubyonRails 
+            Ruby on Rails 
         </div>
         </div>
       </div>
       <div id="past-work" className="component-header">Past Work</div>
-          <div className="projects">
+      {projects.map( (c) => 
+         <Card>
+            <Card.Content>
+              <Image src={c.imageUrl} />
+                <Card.Header>{c.title}</Card.Header>
+                <Card.Meta>
+                {c.subTitle}
+                </Card.Meta>
+                <Card.Description>
+                {c.description}
+                </Card.Description>
+                <Card.Content extra>
+                {c.link}
+                </Card.Content>
+            </Card.Content>
+      </Card>  
+      )}
+          {/* <div className="projects">
             <div id="amzClone-component" className="single-project">
               <a className="project-tittle" href="https://clone-9de46.web.app/" target="_blank" rel="noreferrer"> <Icon name="amazon"></Icon>Amazon-Clone:</a>
               <div id="amzn-img-description" className="image-description">
                 <div className="image-wrap">
-                <img src={Amazoneclone} className="projects-image" alt="Amzone Clone"></img>
+                <img src={single.imageUrl} className="projects-image" alt="Amzone Clone"></img>
                 </div>
                 <div className="paragraph-descrition">
                     I have created a clone to the Amazon store to test out my javascripts developer skills,
@@ -72,24 +90,24 @@ const PastWork = () => {
           </div>
         <div>
       </div>
-    </div>
-    )
-}
+    </div> */}
+  </div>  
+  )}
 
-//const styles = {
-  // center:{
-  //     alignItems: "center",
-  //   },
-  //    links:{
-  //     display: "flex",
-  //     justifyContent: "center",
-  //     alignItems: "center",
-  //     color: "white",
-  //     fontSize:"1.5em",
-  //     marginBottom: "13px",
-  //     marginTop: "20px"
-  //     },
-  //   }
+{/* const styles = {
+   center:{
+      alignItems: "center",
+    },
+     links:{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "white",
+      fontSize:"1.5em",
+      marginBottom: "13px",
+      marginTop: "20px"
+      },
+    }
     const AppContainer = styled.div`
      background:linear-gradient(
        to left top,
@@ -104,6 +122,6 @@ const PastWork = () => {
   const Transparent = styled.div`
 
     background: transparent !important; //in css files this is frowned upon and should be spariningly, it is more common to use when using components/css libraries
-  `;
+  `; */}
   
 export default PastWork;
