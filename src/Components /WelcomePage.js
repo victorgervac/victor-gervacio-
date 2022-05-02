@@ -7,6 +7,7 @@ import '../styles/WelcomePage.css'
 import '../styles/NavBarStyles.css'
 import NavBar from "./NavBar"
 import PastWork from "../PastWork"
+import { describeLine } from "../data"
 //import {Link} from "react-router-dom"
 // import FadeIn from "./FadeIn"
 // import { devices } from "../styles/mediaQuery"
@@ -14,17 +15,16 @@ import PastWork from "../PastWork"
 
 
 
+function createMarkup(markup){
+ return {__html: markup}
+}
 const WelcomePage = () =>{
  const [userName, setUserName] = useState('');
-
 //  const MyName(props){
 //    console.log("hello")
 //  }
   return (
      <div className="container">
-        <div className="naviagtion-component">
-          <NavBar/>
-        </div>
         <div className="landing-content box">
           <div className="component-name">
             <div className="hello-line">
@@ -36,11 +36,7 @@ const WelcomePage = () =>{
             <div className="dev-line">
               I'm a Front-End Developer
             </div>
-            <div className="describe-line">
-              who seeks the challenge of solving real world problems 
-              through coding in a team environment. Interested in all areas of
-              development including application 
-              front and back end work as well as testing and performance.
+            <div className="describe-line" dangerouslySetInnerHTML={createMarkup(describeLine)}>
             </div>
           </div>
           <div className="component-svg ">
@@ -48,6 +44,21 @@ const WelcomePage = () =>{
               <VictorMan1/>
             </div>
           </div>
+          <div className="wrapper-scroll">
+
+          <div class="arrow_container">
+            <a href="#contact-id">
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <span class="text">portfolio</span>
+            </a>
+          </div>
+          </div>
+
+        </div>
+        <div className="naviagtion-component">
+          <NavBar/>
         </div>
         <div id="contact-id" className="contact-component box">
           <ContactComponent/>

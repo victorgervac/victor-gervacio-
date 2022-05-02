@@ -11,6 +11,11 @@ html {
   display:flex;
   flex-direction: column;
 }
+.naviagtion-component{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
 /*the welcome svg and paragraph*/
 .landing-content{
@@ -87,6 +92,89 @@ svg{
   box-sizing: inherit;
   max-width: 90%;
 }
+/*!importan stuff*/
+/* scroll down css*/ 
+
+.wrapper-scroll{
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow_container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -20px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+@keyframes pulse { 
+  to {
+      opacity: 1;
+    }
+  }
+@keyframes move {
+    25% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+/* different screen size stuff*/
+/*! attetion next*/
 @media screen and (max-width: 500px) {
   svg{
     display: none;
@@ -94,6 +182,8 @@ svg{
   .component-name{
     padding: 2rem 1.5rem 1.5rem 2rem;
     height: 100vh;
+    display: flex;
+    justify-content:  flex-start;
   }
   .name-div{
     color: var(--smallscreen-name-color);
@@ -101,6 +191,12 @@ svg{
   }
   .describe-line{
     font-size: 1.5rem;
+  }
+  .wrapper-scroll{
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media only screen and (max-width: 384px) and (min-width: 100px){
@@ -110,7 +206,7 @@ svg{
     margin: 1rem;
   }
 }
-/*color*/
+/*color for svg*/
 #hair{
   fill:var(--hair-color)
 }
@@ -130,14 +226,14 @@ svg{
   fill: var(--paper-color)
 }
 
-/*animation*/
+/*animation for svg*/
 #tablet, #-arm-tablet, #left-hand,#left-arm{
   animation: shake 20s infinite;
 }
 #arm-hand, #note-top1,#note-bottom2, #note-bottom1,#note-bottom0{
   animation: paper-hand 10.85s infinite;
 }
-/*keyframes stuff*/
+/*keyframes stuff svg */
 @keyframes paper-hand {
   50%{
     transform:rotate(-45deg) translate(-123px, 90px); 

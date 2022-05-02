@@ -1,13 +1,13 @@
 nav, .navigation-bar{
   font-size: 12pt;
   line-height: 18pt;
-  background:var(--darksea-color);
+  background:var(--nav-bar-color);
   padding: 14px 16px;
   width: 100%;
-  z-index: 99;
-  left: 0;
-  position: fixed;
-  top:0;
+  z-index: 9 !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   justify-content:center;
 }
 .icon .nav-link:hover{
