@@ -29,6 +29,7 @@
   --componentbg-color:var(--battleship-color);
   --navsm-bg-color:var(--battleship-color);
 
+
   /*normal variables*/
   --main-bg-color: var(--gray-color);
   --nav-bar-color: var(--may-green-color);
@@ -38,8 +39,14 @@
   --connect-link-color: var(--white-color);
   --title-header-color: var(--pink-color);
   --description-words-color:var(--white-color);
+
   --project-link-color:var(--turquoise-color);
+
   --strong-color: var(--hotmess-pink-color);
+
+  --button-bk-color:var(--battleship-color);
+  --button-color:var(--white-color);
+  --card-color:var(--quick-silver-color);
 
   /*styles var*/
   --character-length: var(--char45-width);

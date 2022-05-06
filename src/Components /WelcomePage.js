@@ -47,7 +47,7 @@ const WelcomePage = () =>{
           <div className="wrapper-scroll">
 
           <div class="arrow_container">
-            <a href="#contact-id">
+            <a href="#past-work">
               <div class="chevron"></div>
               <div class="chevron"></div>
               <div class="chevron"></div>
@@ -60,15 +60,15 @@ const WelcomePage = () =>{
         <div className="naviagtion-component">
           <NavBar/>
         </div>
-        <div id="contact-id" className="contact-component box">
-          <ContactComponent/>
-        </div>
         <div id="past-work" className="past-work-component box">
           <PastWork/>
         </div>
         <div id="github" className="github-component box">
           <Github/>
         </div>
+        {/* <div id="contact-id" className="contact-component box">
+          <ContactComponent/>
+        </div> */}
         <div id="about-id" className="about-component box">
          <AboutComponent/>
         </div>

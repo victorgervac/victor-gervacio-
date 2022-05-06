@@ -6,41 +6,23 @@ import "../styles/Github.css"
 import GithubCard from "./GithubCard";
 import { githubDescription } from "../data";
 
+function createMarkup(markup){
+  return {__html: markup}
+}
+
 const Github=()=>{
     return (
-    <div> 
+    <div className="github-component wrap"> 
       <div>
         <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
-        <div className="paragraph-descrition github-paragraph">
-          {githubDescription}
+        <div className="paragraph-descrition github-paragraph" dangerouslySetInnerHTML={createMarkup(githubDescription)}>
         </div>
-        <GithubCard/>
+        {/* <GithubCard/> */}
       </div>
     </div>
   )
 }
 export default Github;
-const styles = {
-  center:{
-      alignItems: "center",
-    },
-     card:{
-      height: "120px",
-      marginBottom: "10px",
-     },
-      portfolio:{
-        fontWeight: "bold",
-        fontSize:"1.5em",
-        color:"#2FEFD0",
-      },
-      paragraph:{
-        display: "flex",
-        fontSize:"1.5em",
-        marginBottom: "28px",
-        marginTop: "5px",
-        color:"black",
-      }
-    }
   
   const rotate360 = keyframes`
    from{

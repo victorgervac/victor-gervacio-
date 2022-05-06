@@ -18,11 +18,16 @@
   align-items: center;
   margin-bottom: 0.5rem;
   color: var( --connect-link-color);
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   transition: color 0.5s;
+  font-weight: bold;
 }
 @media screen and (max-width: 500px) {
   .link-wrap{
     margin-left: 2rem;
   }
+  .social-link{
+    font-size: 1.5rem;
+  }
+
 }

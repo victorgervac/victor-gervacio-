@@ -53,7 +53,9 @@ const PastWork = () => {
                 <div className="paragraph-descrition" dangerouslySetInnerHTML={createMarkup(c.description)}></div>
                 {/* <div><a href={c.link} target="_blank" rel="noreferrer">{c.subTitle}</a></div> */}
                 <div className="paragraph-descrition">{c.frontTechSatck}</div>
-                <div className="paragraph-descrition">{c.backTechStack}</div>
+                <div className="paragraph-descrition">
+                  {c.backTechStack}
+                </div>
               </div>
             </div>
             <hr></hr>
