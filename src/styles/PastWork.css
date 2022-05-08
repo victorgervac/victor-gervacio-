@@ -57,6 +57,7 @@ img{
   width: 100%;
   height: auto;
   color:var(--description-words-color);
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
 }
 .work-description{
   display: flex;

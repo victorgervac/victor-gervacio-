@@ -20,19 +20,15 @@
 
 }
 .github-paragraph{
-  font-size:1.3em;
-  margin-bottom: 28px;
-  margin-top: 2rem;
-  margin-left:2rem;
-  margin-right: 2rem;
-  line-height: 1.167;
-  height:100vh;
-  box-sizing: inherit;
-  max-width: 30ch;
-  padding: 1rem;
-  width: 100%;
-  height: auto;
-  color:var(--description-words-color);
+    font-size: 1.3em;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: .01071em;
+    width: auto;
+    max-width: var(--char-count);
   
 }
 
