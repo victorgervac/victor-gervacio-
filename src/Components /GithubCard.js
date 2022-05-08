@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import { Button , Grid, Icon } from "semantic-ui-react";
+import { Button , Card, CardContent, Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
 
 const GithubCard = () => {
   const [isOPen, setIsOpen ]= useState(false)
@@ -25,41 +25,48 @@ const GithubCard = () => {
   <div className="box-repo">
     <div className="button-wrap"> 
       <Button className="buttom-wrap RepoButton" onClick={getRepos}>Get Repos</Button>
-    </div>      
-        {repos.map((r) =>( 
+    </div>    
+    <Grid columns='three' >
+
+
+              <GridRow > 
+        {repos.map((r) =>(
           <div>
-            <div className="grid-container repo">
-          {r.stargazers_count > 0 &&(
-          <div key={r.id}>
-            {/* <div className="card"> */}
-              {/* <div> */}
-                <h3 className="title">
-                {r.name}
-                </h3>
-                <h4 className="star"> 
-                {r.stargazers_count}
-                </h4>
-                <p className=" description"> 
-                {r.desciption ? `{r.desciption}` : "This project was made usuing the best of my avilitys, follow the code to learn more"}
-                </p>
-                <div className="eq-div-flex">
-                <a href={r.html_url} className="button"  target="_blank" rel="noreferrer">
-                  <span className="card link">
-                    LEARN MORE
-                  </span> 
-                </a>
-                </div>
-              </div>
-            // </div>
-          // </div>
+          {r.stargazers_count > 0 &&( 
+            <div columns='three' divided className="card-container">
+           
+              <Grid.Column className="gridClass" key={r.id} width={2}>
+               <Card className="cardClass" key={r.id}>
+                  <Card.Content header={r.name} />
+                  <Card.Content description={r.description} className="description" /> 
+                  <h4 className="star"> 
+                   <Icon >
+                    {r.stargazers_count}
+                    </Icon>
+                  </h4>
+
+                  {r.desciption ? {r} : "This project was made usuing the best of my avilitys, follow the code to learn more"}
+                  <CardContent>
+                    <a href={r.html_url} className="button"  target="_blank" rel="noreferrer">
+                      <span className="card link">
+                        LEARN MORE
+                      </span> 
+                    </a>
+                  </CardContent>
+              </Card>
+              </Grid.Column>
+          </div>
           )}
-          </div>
-          </div>
+         </div>
         ))}
+        </GridRow>
+        </Grid>
         
   </div>
 );
 }
+
+
 export default GithubCard;
 
 // --main-bg-color: #343b3f;

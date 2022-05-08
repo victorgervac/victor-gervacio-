@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import  { ReactComponent as VictorMan1 } from '../assets/images/victor-man1.svg'
+import  { ReactComponent as VictorMan1 } from '../assets/images/deskGuyLaptop.svg'
 import AboutComponent from "./AboutComponent"
 import ContactComponent from "./ContactComponent"
 import Github from "./Github"
@@ -13,11 +13,12 @@ import { describeLine } from "../data"
 // import { devices } from "../styles/mediaQuery"
 // import styled  from "styled-components";
 
-
+const FRONT_END = "I'm a <strong>Front-End Developer</strong>"
 
 function createMarkup(markup){
  return {__html: markup}
 }
+
 const WelcomePage = () =>{
  const [userName, setUserName] = useState('');
 //  const MyName(props){
@@ -33,8 +34,7 @@ const WelcomePage = () =>{
                 Victor
               </div>
             </div>
-            <div className="dev-line">
-              I'm a Front-End Developer
+            <div className="dev-line" dangerouslySetInnerHTML={createMarkup(FRONT_END)}>
             </div>
             <div className="describe-line" dangerouslySetInnerHTML={createMarkup(describeLine)}>
             </div>

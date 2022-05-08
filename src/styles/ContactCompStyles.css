@@ -10,6 +10,12 @@
   letter-spacing: 0em;
   text-align: left;
   background: transparent !important;
+
+}
+.conect-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .social-link{
   -webkit-font-smoothing: antialiased;
@@ -18,16 +24,17 @@
   align-items: center;
   margin-bottom: 0.5rem;
   color: var( --connect-link-color);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   transition: color 0.5s;
   font-weight: bold;
 }
+
 @media screen and (max-width: 500px) {
-  .link-wrap{
+  /* .link-wrap{
     margin-left: 2rem;
   }
   .social-link{
     font-size: 1.5rem;
-  }
+  } */
 
 }

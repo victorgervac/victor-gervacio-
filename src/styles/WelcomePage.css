@@ -19,21 +19,10 @@ html {
 
 /*the welcome svg and paragraph*/
 .landing-content{
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  font-size: 0.875rem;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.43;
-  letter-spacing: 0.01071em;
-  width: 100%;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
   display: flex;
-  flex-grow: 1;
+  
 }
 .component-name{
   -webkit-font-smoothing: antialiased;
@@ -84,15 +73,10 @@ html {
 .describe-line{
   padding-bottom: 1.5rem;
   font-size: 1.75rem;
-  max-width: var(--character-length);
+  max-width: 50ch;
 
 }
-svg{
-  height:100vh;
-  color: #fff;
-  box-sizing: inherit;
-  max-width: 90%;
-}
+
 /*!importan stuff*/
 /* scroll down css*/ 
 
@@ -152,6 +136,7 @@ svg{
   opacity: .25;
   animation: pulse 2s linear alternate infinite;
 }
+
 @keyframes pulse { 
   to {
       opacity: 1;
@@ -195,7 +180,7 @@ svg{
   }
   .wrapper-scroll{
     position: absolute;
-    bottom: .5rem;
+    bottom: .1rem;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -208,13 +193,14 @@ svg{
   }
 }
 /*color for svg*/
+
 #hair{
   fill:var(--hair-color)
 }
-#arm-hand, #body, #left-arm, #-arm-tablet{
+#arm-hand, #body, #left-arm, #-arm-tablet, #arm{
   fill: var(--shirt-color)
 }
-#handNumber, #left-hand, #face{
+#handNumber, #left-hand, #face, #forArm{
   fill:var(--body-color)
 }
 #pants{
@@ -228,17 +214,61 @@ svg{
 }
 
 /*animation for svg*/
+#desktopSentenceTop, #desktopSentenceLast, #desktopSentenceMid, #laptopscreen{
+  animation: opacityOn  10s infinite;
+}
+#forArm{
+  animation: typing-hand 10.85s infinite;
+}
+#body, #head{
+animation: swing 50s infinite;
+}
+/*! differetn svg */
 #tablet, #-arm-tablet, #left-hand,#left-arm{
-  animation: shake 20s infinite;
+  animation: shake 50s infinite;
 }
 #arm-hand, #note-top1,#note-bottom2, #note-bottom1,#note-bottom0{
   animation: paper-hand 10.85s infinite;
 }
 /*keyframes stuff svg */
+@keyframes opacityOn {
+  0% {
+      opacity: 1;
+  }
+  25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 @keyframes paper-hand {
   50%{
     transform:rotate(-45deg) translate(-123px, 90px); 
     transform-origin: 0% 8%;
+  }
+}
+@keyframes typing-hand {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 @keyframes shake {
@@ -257,19 +287,4 @@ svg{
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-}
-
-/*idk yet*/
-:root {
-  --main-bg-color: #343b3f;
-  --selected-text-color: #212121;
-  --selected-text-bg-color: #aadc39;
-  --main-text-color: #fff;
-  --calendar-text-color: #f5f5f5;
-  --nav-footer-bg-color: rgba(37,37,37,0.98);
-  --small-padding: 1rem;
-  --med-margin: 1.2rem;
-  --larg-padding:1.5rem;
-  --twitter-brand: #1da1f2;
-  --dull-white: #c5c4bf;
 }

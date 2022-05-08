@@ -3,6 +3,7 @@
   --white-color: #F2F2F2;
   --navy-color: #2f2e41;
   --darksea-color: #1b242f;
+  --oxford-blue:#001A37;
   --gray-color:#50514F;
   --nickel-color:#6E6F6E;
   --quick-silver-color:#A2A29D;
@@ -20,9 +21,13 @@
   --pink-color: #DC8888;
   --pastel-red-color:#A74F6A;
   --purple-color: #987284;
+  --silver-pink: #D4BCC0;
+  --isabeline-pink: #F6F2F0;
   --hotmess-pink-color: #E31B6D;
   --turquoise-color:#2FEFD0;
-  --char45-width: 45ch;
+  --char45-width: 20ch;
+  --char-count:50ch;
+  --char4-width: 4ch;
   /*smaller variables*/
   --phonemd-bg-color:var(--bittersweet-red-color);
   --phonelg-bg-color: var(--darksea-color);
@@ -31,16 +36,19 @@
 
 
   /*normal variables*/
-  --main-bg-color: var(--gray-color);
-  --nav-bar-color: var(--may-green-color);
+  --main-bg-color: var( --oxford-blue);
+  --nav-bar-color: var(--darksea-color);
   --hover-nav-color: var(--hunter-green-color);
   --name-landing-color: var(--purple-color);
   --smallscreen-name-color:var(--pink-color);
   --connect-link-color: var(--white-color);
-  --title-header-color: var(--pink-color);
+  --title-header-color: var(--isabeline-pink);
   --description-words-color:var(--white-color);
+  --repo-cards-bk:var(--battleship-color);
+  --techstack-word-color:var(--silver-pink);
 
-  --project-link-color:var(--turquoise-color);
+  --project-title-color: var(--silver-pink); 
+  
 
   --strong-color: var(--hotmess-pink-color);
 
@@ -50,6 +58,7 @@
 
   /*styles var*/
   --character-length: var(--char45-width);
+  --github-card: var(--char4-width);
   /*margins/flex*/
   --spacing: 1rem;
 

@@ -6,7 +6,7 @@ import styled  from "styled-components";
 const ContactComponent=()=>{
   return (
     <div className="conect-wrap">
-      <h1 className="component-header">Connect</h1>
+      <h1 className="component-header-connect">Connect</h1>
       <div className="link-wrap">
       <a href="https://www.linkedin.com/in/victorgervacio/" id="linkedin-social" className="social-link" target="blank">
         <Icon size='big' name="linkedin"></Icon>

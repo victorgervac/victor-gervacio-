@@ -19,15 +19,15 @@ const NavBar=()=>{
       <a href="#contact-id" className="icon"id="contact-icon">
         <Icon name="envelope outline" size="large"></Icon>
       </a>
-      <a href="#contact-id" id="contact" className="nav-link">
-        Contact
-      </a>
 
       <a href="#about-id" className="icon" id="about-icon" >
       <Icon name="user" size="large"></Icon>
       </a>
       <a href="#about-id" id="about" className="nav-link">
         About
+      </a>
+      <a href="#contact-id" id="contact" className="nav-link">
+        Contact
       </a>
     </nav>
   )

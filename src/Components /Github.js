@@ -15,7 +15,7 @@ const Github=()=>{
     <div className="github-component wrap"> 
       <div>
         <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
-        <div className="paragraph-descrition github-paragraph" dangerouslySetInnerHTML={createMarkup(githubDescription)}>
+        <div className="github-paragraph" dangerouslySetInnerHTML={createMarkup(githubDescription)}>
         </div>
         {/* <GithubCard/> */}
       </div>
@@ -49,25 +49,4 @@ export default Github;
        background: linear-gradient(to bottom right, red, green);
      }
 
-   `;
-  const Transparent = styled.div`
-
-    background: transparent !important; //in css files this is frowned upon and should be spariningly, it is more common to use when using components/css libraries
-  `;
-  
-  const ButtonLink = styled.a`
-    float: right;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: 1px solid ${(props) => props.theme.foreGround} !important;
-    color: ${(props) => props.theme.foreGround} !important;
-    background-color: ${(props) => props.theme.backGround} !important;
-    &:hover {
-      border: 1px solid ${(props) => props.theme.backGround} !important;
-      background-color: ${(props) => props.theme.foreGround} !important;
-      color: ${(props) => props.theme.backGround} !important;
-    }`;
-  
-  const ButtonRepo = styled.h3`
-   text-align: center;
   `
