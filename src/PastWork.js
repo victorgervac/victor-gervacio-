@@ -41,15 +41,19 @@ const PastWork = () => {
         {projects.map((c)=>(
           <div className="card-wrap shadow">
             <div className="tittle">
+            <a href={c.link} target="_blank" rel="noreferrer">
                 {c.title}
+                </a>
             </div>
             <div className="card-meta">
               <div className="image-wrap">
+              <a href={c.link} target="_blank" rel="noreferrer">
                 <img src={c.imageUrl} alt="name project"></img>
+                </a>
               </div>
               <div className="work-description"> 
-                <div className="paragraph-descrition link"><a href={c.link} target="_blank" rel="noreferrer">{c.subTitle} Link</a></div>
-                
+                <div className="paragraph-descrition link">{c.subTitle}</div>
+
                 <div className="paragraph-descrition" dangerouslySetInnerHTML={createMarkup(c.description)}></div>
                 <div>
                   <div className="static">

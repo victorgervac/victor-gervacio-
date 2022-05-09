@@ -31,7 +31,7 @@ strong {
   font-size:2.8em;
   color:var(--project-title-color);
   margin-top: 2rem;
-  margin-left: 2rem;
+ 
 }
 .card-meta{
   display: flex;
@@ -49,15 +49,19 @@ img{
   height: auto;
 }
 .paragraph-descrition{
-  font-size:1.5em;
-  line-height: 1.167;
   box-sizing: inherit;
   max-width: 100%;
-  padding: .5rem;
   width: 100%;
   height: auto;
-  color:var(--description-words-color);
+  font-size: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
   font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: .01071em;
+  width: auto;
+  /* max-width: var(--char-count); */
 }
 .work-description{
   display: flex;
@@ -68,6 +72,7 @@ img{
   font-size:2.8em;
   color: var(--techstack-word-color);
   margin-top: 2rem;
+  margin-left:1.25rem;
 }
 .frontend-stack-pastwork{
   font-size:1.5em;
@@ -111,12 +116,13 @@ a{
   .stack{
     display: flex;
     flex-direction: column;
-    margin-left: 1rem; ;
+    margin-left: 1rem; 
   }
   .stack-item{
     margin: 1rem 1.25rem;
     display: flex;
     justify-content: flex-start;
+    font-size:1.8rem;
   }
 }
 /* @media screen and (max-width: 974px){

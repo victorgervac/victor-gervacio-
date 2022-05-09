@@ -20,6 +20,7 @@
 
 }
 .github-paragraph{
+    box-sizing: inherit;
     font-size: 1.3em;
     -webkit-font-smoothing: antialiased;
     color: #fff;
@@ -29,6 +30,7 @@
     letter-spacing: .01071em;
     width: auto;
     max-width: var(--char-count);
+    margin-left: 2rem;
   
 }
 
