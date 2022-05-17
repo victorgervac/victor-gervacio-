@@ -3566,6 +3566,11 @@ core-js@^3.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
   integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
 
+core-js@^3.8.1:
+  version "3.22.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.22.5.tgz#a5f5a58e663d5c0ebb4e680cd7be37536fb2a9cf"
+  integrity sha512-VP/xYuvJ0MJWRAobcmQ8F2H6Bsn+s7zqAAjFaHGBMc5AQm7zaelhD1LGduFn2EehEcQcU+br6t+fwbpQ5d1ZWA==
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
@@ -7669,6 +7674,11 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
+nuka-carousel@^5.0.16:
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-5.0.16.tgz#de6ee41d3a6b7606e90652bfba61928aff22b9ec"
+  integrity sha512-OUMeeb2gQQyez2fYbRe7dx0I4Ow6b3YH4czGVDSpCWjtDbNuj8EXoFEoDgyfkLdK9U+Up7BSrbkHz3vF1r5W2A==
+
 num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
@@ -9286,6 +9296,13 @@ react-scripts@4.0.2:
     workbox-webpack-plugin "5.1.4"
   optionalDependencies:
     fsevents "^2.1.3"
+
+react-simply-carousel@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-simply-carousel/-/react-simply-carousel-7.0.0.tgz#da7c363615d16d5e6d0766574440ea3bfff54862"
+  integrity sha512-N3f5UQYbXja9haRbbAgglMbhYtPoGqPK1VpWlIyRV67bZTHjRnS5pwv/iNNtBu7xbaNHDrijkXKwlHyOn8d8DQ==
+  dependencies:
+    core-js "^3.8.1"
 
 react@^17.0.1:
   version "17.0.2"

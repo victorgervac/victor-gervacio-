@@ -66,6 +66,7 @@ img{
 .work-description{
   display: flex;
   flex-direction: column;
+  padding: 28px;
 }
 .tech-stack{
   font-weight: bold;

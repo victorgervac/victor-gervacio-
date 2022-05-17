@@ -3,12 +3,12 @@ import styled from "styled-components";
 import HeaderText from "./styledComponents/HeaderText";
 import { COLORS } from "./styles/styles";
 import { Switch, Route } from "react-router-dom";
-import PortfolioMain from "./PastWork";
+import PortfolioMain from "./Components /PastWork";
 import NoMatch from "./Components /NoMatch";
 import WelcomePage from "./Components /WelcomePage";
 import { Container } from "semantic-ui-react";
 import {Button, Grid, Card, Icon, Segment} from "semantic-ui-react";
-import PastWork from "./PastWork";
+import PastWork from "./Components /PastWork";
 
 
 function App() {

@@ -48,8 +48,15 @@ svg{
     display: flex;
     flex-direction: column;
 }
-.paragraph-descrition .about{
+.paragraph-descrition{
   font-size: 1.5rem;
   margin: 1rem;
+}
+.about{
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+.connectCard {
+  padding: 0;
 }
 }

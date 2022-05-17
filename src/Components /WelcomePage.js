@@ -1,12 +1,11 @@
 import React, {useState} from "react"
 import  { ReactComponent as VictorMan1 } from '../assets/images/deskGuyLaptop.svg'
 import AboutComponent from "./AboutComponent"
-import ContactComponent from "./ContactComponent"
 import Github from "./Github"
 import '../styles/WelcomePage.css'
 import '../styles/NavBarStyles.css'
 import NavBar from "./NavBar"
-import PastWork from "../PastWork"
+import PastWork from "./PastWork"
 import { describeLine } from "../data"
 //import {Link} from "react-router-dom"
 // import FadeIn from "./FadeIn"

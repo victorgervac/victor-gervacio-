@@ -34,7 +34,12 @@ export const projects = [
     backTechStack:["<strong>Firebase</strong>"],
     subTitle: 'AmzClone React application',
     link: `https://clone-9de46.web.app/`
-  }
+  },
+//   {
+//     id: 3,
+//     title: "Breaking Bad Type Ahead",
+//     imageUrl: 
+//   }
 ]
 export const githubDescription =` 
   My <strong>github</strong> contains the repositories that represent content that 

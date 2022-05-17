@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Icon ,Card, Image, List } from 'semantic-ui-react'
-import "./styles/PastWork.css"
-import { projects } from "./data";
+import "../styles/PastWork.css"
+import { projects } from "../data";
 import styled, { keyframes } from "styled-components";
-import axios from "axios";
-import HeaderText from "./styledComponents/HeaderText";
-import { COLORS } from "./styles/styles";
-import ModalAbout from "./Components /ModalAbout";
+import HeaderText from "../styledComponents/HeaderText";
+import { COLORS } from "../styles/styles";
 import { Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
