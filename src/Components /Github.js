@@ -17,7 +17,7 @@ const Github=()=>{
         <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
         <div className="github-paragraph" dangerouslySetInnerHTML={createMarkup(githubDescription)}>
         </div>
-        <GithubCard/>
+        {/* <GithubCard/>  */}
       </div>
     </div>
   )
