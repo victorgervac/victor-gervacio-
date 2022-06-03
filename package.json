@@ -12,6 +12,7 @@
     "nuka-carousel": "^5.0.16",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hot-toast": "^2.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-simply-carousel": "^7.0.0",

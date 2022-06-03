@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import Carousel from "react-simply-carousel";
 import { Button , Card, CardContent, Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
+import Carousel  from "./Carousel";
+import toast from "react-hot-toast";
 
 const GithubCard = () => {
   const [isOPen, setIsOpen ]= useState(false)
@@ -18,82 +19,51 @@ const GithubCard = () => {
             `https://api.github.com/users/victorgervac/repos`
         );
         debugger
-        if(repos.stargazers_count.length > 0){
         setRepos(res.data);
-        // console.log("called getRepos",res.data);
-        
-        }
+        // console.log("called getRepos",res.data
         } catch (err) {
-        alert("error occuered getting repos");
+          toast.error("Can not load repos")
+        
         }
       }
     
   return(
   <div className="box-repo"> 
-   {/* <Carousel
-        updateOnItemClick
-        containerProps={{
-          style: {
-            width: "100%",
-            justifyContent: "space-between"
-          }
-        }}
-        activeSlideIndex={activeSlide}
-        activeSlideProps={{
-          style: {
-            background: "blue"
-          }
-        }}
-        onRequestChange={setActiveSlide}
-        forwardBtnProps={{
-          children: ">",
-          style: {
-            width: 60,
-            height: 60,
-            minWidth: 60,
-            alignSelf: "center"
-          }
-        }}
-        backwardBtnProps={{
-          children: "<",
-          style: {
-            width: 60,
-            height: 60,
-            minWidth: 60,
-            alignSelf: "center"
-          }
-        }}
-        itemsToShow={2}
-        speed={400}
-      >   */}
+            <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
+                <Carousel show={3}>
+                 <div>
         {repos.map((r) =>(
-          // <div clasName="box-github-cards">
-          // {r.stargazers_count > 0 &&(
-                     
-              <div className="card" key={r.id}>
-               {/* <Card className="cardClass" key={r.id}> */}
+          <div>
+          {r.stargazers_count > 0 &&( 
+            <div>
+                  <div style={{padding: 8}}>
+                  <div key={r.id} >
                   <h1>{r.name}</h1>
                   <div className="description">
                     <h4>{r.description}</h4>
                   </div>
-                  <h4 className="star"> 
-                   <Icon >
-                    {r.stargazers_count}
-                    </Icon>
-                  </h4>
+                  {r.stargazers_count > 0 && (
+                    <div>
+                      <Icon name="star" />
+                    </div>
+                  )}
                   {r.desciption ? {r} : "This project was made usuing the best of my avilitys, follow the code to learn more"}
                   <div>
                     <a href={r.html_url} className="button"  target="_blank" rel="noreferrer">
                       <span className="link">
-                        LEARN MORE
+                        Learn more
                       </span> 
                     </a>
                   </div>
+                  </div>
+                 </div>
+                 </div>
+                 )}
+                 </div>
+               ))} 
+                 </div>
+          </Carousel>        
           </div>
-          // )}
-        //  </div>
-        ))} 
-        {/* </Carousel> */}
   </div>
 );
 }

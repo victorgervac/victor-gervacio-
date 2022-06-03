@@ -4,8 +4,8 @@
 .box-repo{
  display:flex;
  flex-direction: row ;
-
 }
+
 .box-github-cards{
  display: flex;
  overflow: scroll;
@@ -13,16 +13,17 @@
 
 .card{
   background: red;
-  width: 300;
-  height: 300;
+  width: auto;
+  height: auto;
   border: 30px solid white;
   text-align: center;
   line-height: 240px;
   box-sizing: border-box;
 }
+
 .button-wrap{
- 
 }
+
 .description{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -49,6 +50,16 @@
 
 .cardClass{
   margin: 2rem;
+}
+
+.carousel{
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+
+}
+
+.carousel .item {
+  scroll-snap-align: start;
 }
 /* .card-container{
 
