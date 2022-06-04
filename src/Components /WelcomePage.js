@@ -45,12 +45,12 @@ const WelcomePage = () =>{
           </div>
           <div className="wrapper-scroll">
 
-          <div class="arrow_container">
+          <div className="arrow_container">
             <a href="#past-work">
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-              <span class="text">portfolio</span>
+              <div className="chevron"></div>
+              <div className="chevron"></div>
+              <div className="chevron"></div>
+              <span className="text">portfolio</span>
             </a>
           </div>
           </div>

@@ -37,6 +37,7 @@ const PastWork = () => {
       </div>
       <div>
         {projects.map((c)=>(
+              <div key={c.id}>
           <div className="card-wrap shadow">
             <div className="tittle">
             <a href={c.link} target="_blank" rel="noreferrer">
@@ -65,6 +66,7 @@ const PastWork = () => {
                   </div>
                     <div className="frontend-stack-pastwork" dangerouslySetInnerHTML={createMarkup(c.backTechStack)}></div>
                     </div>
+              </div>
               </div>
             </div>
             <hr></hr>
