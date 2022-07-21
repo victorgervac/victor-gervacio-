@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "carousel-react-rcdev": "^0.0.4",
     "gsap": "^3.6.0",
     "nuka-carousel": "^5.0.16",
     "react": "^17.0.1",

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import { Button , Card, CardContent, Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
-import Carousel  from "./Carousel";
+import Carousel from 'carousel-react-rcdev'
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const GithubCard = () => {
   const [isOPen, setIsOpen ]= useState(false)
@@ -18,53 +19,42 @@ const GithubCard = () => {
         const res = await axios.get(
             `https://api.github.com/users/victorgervac/repos`
         );
-        debugger
+
         setRepos(res.data);
+
         // console.log("called getRepos",res.data
         } catch (err) {
           toast.error("Can not load repos")
         
         }
       }
+     const styleRepos = ()=> {
+      return repos.map(r =>{
+
+        return (
+        <span key={r.id} className="calendar-days">
+          <strong>{r.name}</strong>
+          <span>{r.description}</span>
+          <a href={r.html_url} className="primary-button"  target="_blank" rel="noreferrer">
+            <span className="link">
+              Learn more
+            </span> 
+          </a>
+        </span>
+        )
+      })
+     }
     
   return(
-  <div className="box-repo"> 
-            <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
-                <Carousel show={3}>
-                 <div>
-        {repos.map((r) =>(
-          <div>
-          {r.stargazers_count > 0 &&( 
-            <div>
-                  <div style={{padding: 8}}>
-                  <div key={r.id} >
-                  <h1>{r.name}</h1>
-                  <div className="description">
-                    <h4>{r.description}</h4>
-                  </div>
-                  {r.stargazers_count > 0 && (
-                    <div>
-                      <Icon name="star" />
-                    </div>
-                  )}
-                  {r.desciption ? {r} : "This project was made usuing the best of my avilitys, follow the code to learn more"}
-                  <div>
-                    <a href={r.html_url} className="button"  target="_blank" rel="noreferrer">
-                      <span className="link">
-                        Learn more
-                      </span> 
-                    </a>
-                  </div>
-                  </div>
-                 </div>
-                 </div>
-                 )}
-                 </div>
-               ))} 
-                 </div>
-          </Carousel>        
-          </div>
+  <div className='scrolling-wrapper'>                 
+      <div>
+    {/* {r.stargazers_count > 0 &&(  */}
+        <div className='scrolling-wrapper'>
+           {styleRepos()}
+        </div>
+    </div>
   </div>
+
 );
 }
 

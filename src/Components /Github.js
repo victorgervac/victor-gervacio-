@@ -12,12 +12,12 @@ function createMarkup(markup){
 
 const Github=()=>{
     return (
-    <div className="github-component wrap"> 
-      <div>
+    <div className=""> 
         <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="github"></Icon>Github</a>
+      <div className="grid-container">
         <div className="github-paragraph" dangerouslySetInnerHTML={createMarkup(githubDescription)}>
         </div>
-        {/* <GithubCard/>  */}
+        <GithubCard/> 
       </div>
     </div>
   )

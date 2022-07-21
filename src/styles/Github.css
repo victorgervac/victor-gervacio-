@@ -1,5 +1,6 @@
 .wrap{
- 
+  /* display: flex; */
+
 }
 .box-repo{
  display:flex;
@@ -10,7 +11,10 @@
  display: flex;
  overflow: scroll;
 }
-
+.repo-card{
+  background-color: #fff;
+  margin:1rem;
+}
 .card{
   background: red;
   width: auto;
@@ -52,15 +56,71 @@
   margin: 2rem;
 }
 
-.carousel{
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 24px;
-
+.scrolling-wrapper{
+  width: auto;
+  overflow:scroll;      
+  white-space: nowrap;
+  box-sizing:border-box;
+  ;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: transparent!;
+  padding: 10px;
+  line-height: 5em;
+}
+.calendar-days{
+  display: absolute;
+  background-color: #333;
+  display: inline-block;
+  color: white;
+  /* text-align: center; */
+  padding: 1rem;
+  margin:3rem;
+  text-decoration: none;
+}
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
 }
 
-.carousel .item {
-  scroll-snap-align: start;
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+.primary-button{
+  background-color: turquoise;
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+}
+/* @media screen and (max-width: 500px) {
+  .stack{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem; 
+  }
+  .stack-item{
+    margin: 1rem 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    font-size:1.8rem;
+  }
+} */
 /* .card-container{
 
   --main-bg-color: #343b3f;

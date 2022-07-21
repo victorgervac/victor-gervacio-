@@ -43,9 +43,8 @@ export const projects = [
 ]
 export const githubDescription =` 
   My <strong>github</strong> contains the repositories that represent content that 
-  I have created and still <strong>developing</strong>. You can load the repositories 
-  by clicking the button below or following the name link 
-  to see my activty and explore more.
+  I have created and still <strong>developing</strong>.enjoy the carousel of repositories 
+  to see my activty and explore more visit my github.
 `
 export const aboutMe = `
   Hello, I am Victor somethings about me. I completed a <strong>full-stack software developer</strong> certificate offered by the University of Utah.  
