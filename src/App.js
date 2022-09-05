@@ -13,7 +13,7 @@ import PastWork from "./Components /PastWork";
 
 function App() {
   return (
-        <div>
+        <div className="overflow-hidden">
           <main>
             <Switch>
               <Route exact path="/" component={WelcomePage} />

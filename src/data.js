@@ -43,7 +43,7 @@ export const projects = [
 ]
 export const githubDescription =` 
   My <strong>github</strong> contains the repositories that represent content that 
-  I have created and still <strong>developing</strong>.enjoy the carousel of repositories 
+  I have created and still <strong>developing</strong>. Enjoy the carousel of repositories 
   to see my activty and explore more visit my github.
 `
 export const aboutMe = `
