@@ -19,6 +19,8 @@ const PastWork = () => {
         <div id="tech-stack" className="tech-stack">Tech Stack</div>
         <div className="stack">
           <div className="stack-item javascript">
+            <a href="https://js.org/" target="_blank" rel="noreferrer">
+            </a>
             <Icon name="js">
             </Icon>
               JavaScript

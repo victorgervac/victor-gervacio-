@@ -19,7 +19,7 @@ const GithubCard = () => {
         const res = await axios.get(
             `https://api.github.com/users/victorgervac/repos`
         );
-
+   
         setRepos(res.data);
 
         // console.log("called getRepos",res.data
@@ -32,15 +32,19 @@ const GithubCard = () => {
       return repos.map(r =>{
 
         return (
-        <span key={r.id} className="calendar-days">
-          <strong>{r.name}</strong>
-          <span>{r.description}</span>
+        <div key={r.id} className="calendar-days">
+          <div className="sub-card" >
+          <h4><b>{r.name}</b></h4>
+          <b className="sub-tittle">{r.language}</b>
+          <p>{r.description}</p>
+          {/* <span>{r.description}</span> */}
+          <div>
           <a href={r.html_url} className="primary-button"  target="_blank" rel="noreferrer">
-            <span className="link">
               Learn more
-            </span> 
           </a>
-        </span>
+          </div>
+          </div>
+        </div>
         )
       })
      }

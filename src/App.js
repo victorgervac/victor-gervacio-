@@ -14,10 +14,12 @@ import PastWork from "./Components /PastWork";
 function App() {
   return (
         <div>
-        <Switch>
-          <Route exact path="/" component={WelcomePage} />
-          <Route component={NoMatch} />
-        </Switch>
+          <main>
+            <Switch>
+              <Route exact path="/" component={WelcomePage} />
+              <Route component={NoMatch} />
+            </Switch>
+          </main>
         </div>
     
   );
