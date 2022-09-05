@@ -12,7 +12,7 @@ import { describeLine } from "../data"
 // import { devices } from "../styles/mediaQuery"
 // import styled  from "styled-components";
 
-const FRONT_END = "A <strong>Front-End Developer</strong>"
+const FRONT_END = "A <strong>Software Developer</strong>"
 
 function createMarkup(markup){
  return {__html: markup}
