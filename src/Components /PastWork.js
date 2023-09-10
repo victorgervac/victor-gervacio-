@@ -11,6 +11,13 @@ import { Link } from "react-router-dom";
 function createMarkup(markup){
   return {__html: markup}
 }
+const checkModule= (numb)=>{
+  if(numb % 2 == 0){
+    return true 
+  }else{
+    return false 
+  }
+}
 const PastWork = () => { 
   return (
     <div>
@@ -39,7 +46,7 @@ const PastWork = () => {
         </div>
       </div>
       <div>
-        {projects.map((c)=>(
+        {projects.map((c,index)=>(
               <div key={c.id}>
           <div className="card-wrap shadow">
             <div className="tittle">
@@ -47,7 +54,7 @@ const PastWork = () => {
                 {c.title}
                 </a>
             </div>
-            <div className="card-meta">
+            <div className={`${checkModule(index) ? "card-meta" : "card-meta-rev" } shadow`}>
               <div className="image-wrap">
               <a href={c.link} target="_blank" rel="noreferrer">
                 <img src={c.imageUrl} alt="name project"></img>

@@ -26,6 +26,7 @@ strong {
   display:block;
   margin: 2rem;
 }
+
 .tittle{
   font-weight: bold;
   font-size:2.8em;
@@ -37,6 +38,21 @@ strong {
   display: flex;
   flex-direction: row;
 }
+
+  
+@media only screen and (min-width: 730px) {
+    .card-meta-rev{
+      display: flex;
+      flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 729px) {
+    .card-meta-rev{
+    
+      flex-direction: row;
+  }
+}
+
 /* .image-wrap{
   width: 80%;
 } */

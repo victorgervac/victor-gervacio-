@@ -27,12 +27,13 @@ const GithubCard = () => {
         
         }
 
-       const toTitleCase= (str)=> {
-          debugger 
-        }
       }
+      const toTitleCase= (str)=> {
+         
+         
+       }
      const styleRepos = ()=> {
-      return repos.map(r =>{
+      return repos.map((r,index) =>{
 
         return (
         <div key={r.id} className="calendar-days rounded">
