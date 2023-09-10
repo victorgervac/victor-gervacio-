@@ -14,10 +14,15 @@ function createMarkup(markup){
 const PastWork = () => { 
   return (
     <div>
-      <div id="past-work" className="component-header past-work">Past Work</div>
+      <div id="past-work" className="component-header past-work">Projects</div>
       <div className="techSta-component">   
         <div id="tech-stack" className="tech-stack">Tech Stack</div>
         <div className="stack">
+          <div className="stack-item ruby" >
+              <Icon name="diamond">
+              </Icon>
+              Ruby on Rails 
+          </div>
           <div className="stack-item javascript">
             <a href="https://js.org/" target="_blank" rel="noreferrer">
             </a>
@@ -29,12 +34,8 @@ const PastWork = () => {
             <Icon name="react">
             </Icon>
                React
+            
           </div>
-          <div className="stack-item ruby" >
-          <Icon name="diamond">
-          </Icon>
-            Ruby on Rails 
-        </div>
         </div>
       </div>
       <div>

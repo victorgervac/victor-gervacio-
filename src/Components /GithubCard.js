@@ -27,12 +27,16 @@ const GithubCard = () => {
           toast.error("Can not load repos")
         
         }
+
+       const toTitleCase= (str)=> {
+          debugger 
+        }
       }
      const styleRepos = ()=> {
       return repos.map(r =>{
 
         return (
-        <div key={r.id} className="calendar-days">
+        <div key={r.id} className="calendar-days rounded">
           <div className="sub-card" >
           <h4><b>{r.name}</b></h4>
           <b className="sub-tittle">{r.language}</b>

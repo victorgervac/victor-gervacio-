@@ -14,10 +14,10 @@ export const projects = [
     title: "DevTracker" , 
     imageUrl: devtracker,
     description: 
-    `This app was created in an <strong>agile environment</strong> with two team mates and myself.
+    `This app was created as a end of year project for my University Of Utah bootcamp. In an <strong>agile environment</strong> with two team mates and myself.
     I consider this to be the <strong>ultimate TODO list</strong> to help your job search. 
     This app was created with the following techonologies.`,
-    frontTechSatck: ["<strong>Drag and Drop</strong> ","<strong>Router</strong>"," <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
+    frontTechSatck: ["<strong>Router</strong>"," <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
     backTechStack:["<strong>Ruby on rails</strong> ", " <strong>Gems</strong> ", " <strong>PostgresQL</strong>"],
     subTitle: 'DevTracker React application',
     link:"https://amazingdevtracker.herokuapp.com",
@@ -28,11 +28,11 @@ export const projects = [
     imageUrl: amazoneclone,
     description: 
     `I have created a clone to the Amazon store to test out my <strong>javascripts</strong> developer skills,
-    while writing <strong>JSX</strong> in the react framework. Follow the link to open the up the app,
+    while writing <strong>JSX</strong>. Follow the link to open the up the app,
     and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
-    frontTechSatck: ["<strong>React</strong> ", " <strong>Number Format<strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
+    frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
     backTechStack:["<strong>Firebase</strong>"],
-    subTitle: 'AmzClone React application',
+    subTitle: 'Amazone Clone',
     link: `https://clone-9de46.web.app/`
   },
 //   {
