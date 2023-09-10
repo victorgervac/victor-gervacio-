@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import { Button , Card, CardContent, Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
-import Carousel from 'carousel-react-rcdev'
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
