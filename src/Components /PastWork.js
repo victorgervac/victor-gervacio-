@@ -57,7 +57,9 @@ const PastWork = () => {
             <div className={`${checkModule(index) ? "card-meta" : "card-meta-rev" } shadow`}>
               <div className="image-wrap">
               <a href={c.link} target="_blank" rel="noreferrer">
-                <img src={c.imageUrl} alt="name project"></img>
+                {c.imageUrl.map((img)=>(
+                  <img src={img} alt="name project"></img>
+                ))}
                 </a>
               </div>
               <div className="work-description"> 

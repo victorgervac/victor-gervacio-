@@ -12,27 +12,27 @@ export const projects = [
   {
     id: 1,
     title: "DevTracker" , 
-    imageUrl: devtracker,
+    imageUrl: [devtracker],
     description: 
     `This app was created as a end of year project for my University Of Utah bootcamp. In an <strong>agile environment</strong> with two team mates and myself.
     I consider this to be the <strong>ultimate TODO list</strong> to help your job search. 
     This app was created with the following techonologies.`,
     frontTechSatck: ["<strong>Router</strong>"," <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
     backTechStack:["<strong>Ruby on rails</strong> ", " <strong>Gems</strong> ", " <strong>PostgresQL</strong>"],
-    subTitle: 'DevTracker React application',
+    subTitle: 'DevTracker React Application',
     link:"https://amazingdevtracker.herokuapp.com",
   },
   {
     id: 2,
     title: "Amazone Clone" , 
-    imageUrl: amazoneclone,
+    imageUrl: [amazoneclone],
     description: 
     `I have created a clone to the Amazon store to test out my <strong>javascripts</strong> developer skills,
     while writing <strong>JSX</strong>. Follow the link to open the up the app,
     and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
     frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
     backTechStack:["<strong>Firebase</strong>"],
-    subTitle: 'Amazone Clone',
+    subTitle: 'Amazone React Clone',
     link: `https://clone-9de46.web.app/`
   },
 //   {
