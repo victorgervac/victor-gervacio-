@@ -48,9 +48,15 @@ strong {
 }
 @media only screen and (max-width: 729px) {
     .card-meta-rev{
-    
       flex-direction: row;
   }
+}
+.pic-cour{
+  width: auto;
+  overflow:scroll;      
+  white-space: nowrap;
+  box-sizing:border-box;
+
 }
 
 /* .image-wrap{
@@ -63,6 +69,7 @@ img{
   padding: 2rem;
   width: 100%;
   height: auto;
+
 }
 .paragraph-descrition{
   box-sizing: inherit;

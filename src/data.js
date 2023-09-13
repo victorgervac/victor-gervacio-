@@ -1,5 +1,7 @@
 import devtracker from "./assets/images/DevTracker.png"
 import amazoneclone from "./assets/images/Amazoneclone.png"
+import amazoneshop from "./assets/images/AmazoneShoppingCart.png"
+import amazonelog from "./assets/images/AmazoneLogin.png"
 
 export const describeLine=`
   who seeks the challenge of <strong>solving</strong> real world problems 
@@ -25,9 +27,9 @@ export const projects = [
   {
     id: 2,
     title: "Amazone Clone" , 
-    imageUrl: [amazoneclone],
+    imageUrl: [amazoneclone,amazoneshop,amazonelog],
     description: 
-    `I have created a clone to the Amazon store to test out my <strong>javascripts</strong> developer skills,
+    `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
     while writing <strong>JSX</strong>. Follow the link to open the up the app,
     and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
     frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],

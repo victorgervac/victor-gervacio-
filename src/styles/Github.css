@@ -61,7 +61,7 @@
   overflow:scroll;      
   white-space: nowrap;
   box-sizing:border-box;
-  ;
+  
 }
 .grid-container {
   display: grid;

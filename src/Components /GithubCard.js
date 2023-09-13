@@ -37,7 +37,7 @@ const GithubCard = () => {
 
         return (
         <div key={r.id} className="calendar-days rounded">
-          <div className="sub-card" >
+          <div className="sub-card rounded" >
           <h4><b>{r.name}</b></h4>
           <b className="sub-tittle">{r.language}</b>
           <p>{r.description}</p>
