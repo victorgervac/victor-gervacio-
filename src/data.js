@@ -19,12 +19,12 @@ export const projects = [
     title: "DevTracker" , 
     imageUrl: [devtracker,devLogin,devWelcome,devSignin],
     description: 
-    `This app was created as a end of year project for my University Of Utah bootcamp. In an <strong>agile environment</strong> with two team mates and myself.
-    I consider this to be the <strong>ultimate TODO list</strong> to help your job search. 
+    `
+    This app was created as an end-of-year project for my University of Utah coding boot camp. In an agile environment with two teammates and myself, I consider this to be the  <strong>ultimate TODO list</strong>. With a <strong>React</strong> frontend and a <strong>Ruby on Rails</strong> backend, this app will help you organize your job search. 
     This app was created with the following techonologies.`,
-    frontTechSatck: ["<strong>Router</strong>"," <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
-    backTechStack:["<strong>Ruby on rails</strong> ", " <strong>Gems</strong> ", " <strong>PostgresQL</strong>"],
-    subTitle: 'DevTracker React Application',
+    frontTechSatck: [" <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
+    backTechStack:["<strong>Ruby On Rails</strong> ", " <strong>PostgresQL</strong>"],
+    subTitle: 'DevTracker React/Ruby Application',
     link:"",
   },
   {
@@ -47,9 +47,7 @@ export const projects = [
 //   }
 ]
 export const githubDescription =` 
-  My <strong>github</strong> contains the repositories that represent content that 
-  I have created and still <strong>developing</strong>. Enjoy the carousel of repositories 
-  to see my activty and explore more visit my github.
+My <strong>GitHub</strong> contains the repositories of projects I have worked on, both current and past. Through an API call, I have fetched and created this carousel of my repositories. To see my activity and explore more, visit my GitHub.
 `
 export const aboutMe = `
   Hello, I am Victor somethings about me. I completed a <strong>full-stack software developer</strong> certificate offered by the University of Utah.  
