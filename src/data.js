@@ -1,4 +1,7 @@
 import devtracker from "./assets/images/DevTracker.png"
+import devLogin from "./assets/images/DevLogin.png"
+import devWelcome from "./assets/images/DevWelcome.png"
+import devSignin from  "./assets/images/DevSigin.png"
 import amazoneclone from "./assets/images/Amazoneclone.png"
 import amazoneshop from "./assets/images/AmazoneShoppingCart.png"
 import amazonelog from "./assets/images/AmazoneLogin.png"
@@ -14,7 +17,7 @@ export const projects = [
   {
     id: 1,
     title: "DevTracker" , 
-    imageUrl: [devtracker],
+    imageUrl: [devtracker,devLogin,devWelcome,devSignin],
     description: 
     `This app was created as a end of year project for my University Of Utah bootcamp. In an <strong>agile environment</strong> with two team mates and myself.
     I consider this to be the <strong>ultimate TODO list</strong> to help your job search. 
@@ -22,7 +25,7 @@ export const projects = [
     frontTechSatck: ["<strong>Router</strong>"," <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
     backTechStack:["<strong>Ruby on rails</strong> ", " <strong>Gems</strong> ", " <strong>PostgresQL</strong>"],
     subTitle: 'DevTracker React Application',
-    link:"https://amazingdevtracker.herokuapp.com",
+    link:"",
   },
   {
     id: 2,
@@ -30,7 +33,7 @@ export const projects = [
     imageUrl: [amazoneclone,amazoneshop,amazonelog],
     description: 
     `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
-    while writing <strong>JSX</strong>. Follow the link to open the up the app,
+    while writing <strong>JSX</strong>. Follow the link to open the app,
     and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
     frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
     backTechStack:["<strong>Firebase</strong>"],
