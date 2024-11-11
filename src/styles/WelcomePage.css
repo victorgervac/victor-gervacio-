@@ -5,6 +5,7 @@ html {
   margin-bottom:1rem ;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 .container{
   background-color: var(--main-bg-color);
   height: 100%;
@@ -175,6 +176,12 @@ html {
     color: var(--smallscreen-name-color);
     font-weight: bold;
   }
+  #contact-id{
+    background-color: var(--phonelg-bg-color);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+  }
   .describe-line{
     font-size: 1.5rem;
   }
@@ -186,10 +193,13 @@ html {
   }
 }
 @media only screen and (max-width: 384px) and (min-width: 100px){
+  #contact-id{
+    color: var(--smallscreen-name-color);
+  }
   .icon{
     overflow: hidden;
-    size: 1rem;
-    margin: 1rem;
+    size: .5rem;
+    margin: .5rem;
   }
 }
 /*color for svg*/

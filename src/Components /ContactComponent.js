@@ -16,10 +16,10 @@ const ContactComponent=()=>{
         <Icon size='big' name="github"></Icon>
         victorgervac
       </a>
-      <a href="mailto:victorgervacio33@gmail.com" className="social-link">
+      {/* <a href="mailto:victorgervacio33@gmail.com" className="social-link">
         <Icon size='big' name="mail"></Icon>
         victorgervacio33@gmail.com
-      </a>
+      </a> */}
       </div>
     </div>
   )

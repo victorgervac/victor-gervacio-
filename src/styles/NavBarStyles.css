@@ -40,7 +40,7 @@ nav, .navigation-bar{
     color: var(--white-color);
     cursor: pointer;
     transition: color 0.5s;
-    margin:2rem;
+    margin: 1.5rem;
     width: 5px;
     height: 5px;
     size:10px;

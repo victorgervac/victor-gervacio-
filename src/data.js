@@ -6,6 +6,8 @@ import amazoneclone from "./assets/images/Amazoneclone.png"
 import amazoneshop from "./assets/images/AmazoneShoppingCart.png"
 import amazonelog from "./assets/images/AmazoneLogin.png"
 import aceApps from "./assets/images/AceLogoFull.png"
+import aceProj from "./assets/images/ace_proj.png"
+import aceTerm from "./assets/images/ace_term.png"
 
 export const describeLine=`
   who seeks the challenge of <strong>solving</strong> real world problems 
@@ -18,10 +20,9 @@ export const projects = [
   {
     id: 3,
     title: "ACE Apps" , 
-    imageUrl: [aceApps],
+    imageUrl: [aceApps,aceProj,aceTerm],
     description: 
-    `ACE Apps, catering to our member staff and partners. At the
-    direction of ACEs Sr. Director of ITSS, user-friendly integrations that ultimately helps deliver ACEs mission.`,
+    `ACE Apps caters to our members and staff. Built with <strong>Rails, Tailwind, and JavaScript</strong>, along with other Rails <strong>gems </strong>including Stimulus and many more, it renders a cluster of Rails applications with user-friendly integrations that support <strong>ACE's mission</strong>. This app cluster includes tools for member, project, contracts, and time management.`,
     frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>Javascript</strong> "," <strong>Tailwind</strong>"],
     backTechStack:["<strong>Ruby on Rail</strong>", "<strong>SQL</strong>"],
     subTitle: 'American Conservation Expirience',
