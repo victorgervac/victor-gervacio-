@@ -25,7 +25,7 @@ export const projects = [
     `ACE Apps caters to our members and staff. Built with <strong>Rails, Tailwind, and JavaScript</strong>, along with other Rails <strong>gems </strong>including Stimulus and many more, it renders a cluster of Rails applications with user-friendly integrations that support <strong>ACE's mission</strong>. This app cluster includes tools for member, project, contracts, and time management.`,
     frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>Javascript</strong> "," <strong>Tailwind</strong>"],
     backTechStack:["<strong>Ruby on Rail</strong>", "<strong>SQL</strong>"],
-    subTitle: 'American Conservation Expirience',
+    subTitle: 'American Conservation Experience',
     link: `https://projects.usaconservation.org/`
   },
   {
