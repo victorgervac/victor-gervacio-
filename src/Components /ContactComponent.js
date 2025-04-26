@@ -16,31 +16,8 @@ const ContactComponent=()=>{
         <Icon size='big' name="github"></Icon>
         victorgervac
       </a>
-      {/* <a href="mailto:victorgervacio33@gmail.com" className="social-link">
-        <Icon size='big' name="mail"></Icon>
-        victorgervacio33@gmail.com
-      </a> */}
       </div>
     </div>
   )
 }
 export default ContactComponent;
-// const styles = {
-//   center:{
-//       alignItems: "center",
-//     },
-//      links:{
-//       display: "flex",
-//       justifyContent: "center",
-//       alignItems: "center",
-//       color: "white",
-//       fontSize:"1.5em",
-//       marginBottom: "13px",
-//       marginTop: "20px"
-//       },
-//       portfolio:{
-//         fontWeight: "bold",
-//         fontSize:"1.5em",
-//         color:"#2FEFD0",
-//       },
-//     }

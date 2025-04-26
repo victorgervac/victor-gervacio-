@@ -1,73 +1,63 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios"
-import { Button , Card, CardContent, Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Icon } from "semantic-ui-react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
 
 const GithubCard = () => {
-  const [isOPen, setIsOpen ]= useState(false)
-  const [repos, setRepos]= useState([]);
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [repos, setRepos] = useState([]);
 
-    useEffect(()=>{
-      getRepos()
-    },[]);
+  useEffect(() => {
+    getRepos();
+  }, []);
 
-    async function getRepos() {
-        try {
-        const res = await axios.get(
-            `https://api.github.com/users/victorgervac/repos`
-        );
-   
-        setRepos(res.data);
+  async function getRepos() {
+    try {
+      const res = await axios.get(
+        `https://api.github.com/users/victorgervac/repos`
+      );
 
-        // console.log("called getRepos",res.data
-        } catch (err) {
-          toast.error("Can not load repos")
-        
-        }
+      const sortedRepos = res.data.sort(
+        (a, b) => b.stargazers_count - a.stargazers_count
+      );
 
-      }
-      const toTitleCase= (str)=> {
-         
-         
-       }
-     const styleRepos = ()=> {
-      return repos.map((r,index) =>{
+      setRepos(sortedRepos);
+    } catch (err) {
+      toast.error("Could not load GitHub repositories.");
+    }
+  }
 
-        return (
-        <div key={r.id} className="calendar-days rounded">
-          <div className="sub-card rounded" >
-          <h4><b>{r.name}</b></h4>
-          <b className="sub-tittle">{r.language}</b>
-          <p>{r.description}</p>
-          {/* <span>{r.description}</span> */}
-          <div>
-          <a href={r.html_url} className="primary-button"  target="_blank" rel="noreferrer">
-              Learn more
-          </a>
-          </div>
+  
+
+  return (
+    <div className="scrolling-wrapper">
+      {repos.map((repo) => (
+        <div key={repo.id} className="calendar-days rounded">
+          <div className="sub-card rounded">
+          <h4>
+            <b>{repo.name}</b> 
+            {repo.stargazers_count > 0 && (
+              <Icon name="star" color="yellow" style={{ marginLeft: "0.5rem" }} />
+            )}
+          </h4>
+            <b className="sub-tittle">{repo.language || "Unknown"}</b>
+            <p>{repo.description || "No description provided."}</p>
+            <a
+              href={repo.html_url}
+              className="primary-button"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
           </div>
         </div>
-        )
-      })
-     }
-    
-  return(
-  <div className='scrolling-wrapper'>                 
-      <div>
-    {/* {r.stargazers_count > 0 &&(  */}
-        <div className='scrolling-wrapper'>
-           {styleRepos()}
-        </div>
+      ))}
     </div>
-  </div>
-
-);
-}
-
+  );
+};
 
 export default GithubCard;
+
 
 // --main-bg-color: #343b3f;
 // --selected-text-color: #212121;

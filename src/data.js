@@ -61,7 +61,7 @@ export const projects = [
 //   }
 ]
 export const githubDescription =` 
-My <strong>GitHub</strong> contains the repositories of projects I have worked on, both current and past. Through an API call, I have fetched and created this carousel of my repositories. To see my activity and explore more, visit my GitHub.
+My <strong>GitHub</strong> contains the repositories of projects I have worked on, both current and past. Through an API call, I have fetched and created this carousel of my repositories and my github activity. explore more at my GitHub.
 `
 export const aboutMe = `
   Hello, I am Victor somethings about me. I completed a <strong>full-stack software developer</strong> certificate offered by the University of Utah.  

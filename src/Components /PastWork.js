@@ -12,7 +12,7 @@ const checkModule = (index) => index % 2 === 0;
 const PastWork = () => {
   return (
     <section id="past-work" className="past-work-section">
-      <h2 className="component-header">Projects</h2>
+      <h2 className="component-header">Work</h2>
 
       {/* Tech Stack */}
       <div className="techSta-component">
