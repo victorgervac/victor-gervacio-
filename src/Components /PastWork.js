@@ -1,92 +1,86 @@
-import React, { useState, useEffect } from "react";
-import { Icon ,Card, Image, List } from 'semantic-ui-react'
-import "../styles/PastWork.css"
+import React from "react";
+import { Icon } from 'semantic-ui-react';
+import "../styles/PastWork.css";
 import { projects } from "../data";
-import styled, { keyframes } from "styled-components";
-import HeaderText from "../styledComponents/HeaderText";
-import { COLORS } from "../styles/styles";
-import { Switch, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-function createMarkup(markup){
-  return {__html: markup}
+function createMarkup(markup) {
+  return { __html: markup };
 }
-const checkModule= (numb)=>{
-  if(numb % 2 == 0){
-    return true 
-  }else{
-    return false 
-  }
-}
-const PastWork = () => { 
+
+const checkModule = (index) => index % 2 === 0;
+
+const PastWork = () => {
   return (
-    <div>
-      <div id="past-work" className="component-header past-work">Projects</div>
-      <div className="techSta-component">   
-        <div id="tech-stack" className="tech-stack">Tech Stack</div>
+    <section id="past-work" className="past-work-section">
+      <h2 className="component-header">Projects</h2>
+
+      {/* Tech Stack */}
+      <div className="techSta-component">
+        <h3 id="tech-stack" className="tech-stack">Tech Stack</h3>
         <div className="stack">
-          <div className="stack-item ruby" >
-              <Icon name="diamond">
-              </Icon>
-              Ruby on Rails 
+          <div className="stack-item ruby">
+            <Icon name="diamond" />
+            Ruby on Rails
           </div>
           <div className="stack-item javascript">
-            <a href="https://js.org/" target="_blank" rel="noreferrer">
-            </a>
-            <Icon name="js">
-            </Icon>
-              JavaScript
+            <Icon name="js" />
+            JavaScript
           </div>
           <div className="stack-item react">
-            <Icon name="react">
-            </Icon>
-               React
-            
+            <Icon name="react" />
+            React
           </div>
         </div>
       </div>
-      <div>
-        {projects.map((c,index)=>(
-              <div key={c.id}>
-          <div className="card-wrap shadow">
-            <div className="tittle">
-            <a href={c.link} target="_blank" rel="noreferrer">
-                {c.title}
-                </a>
-            </div>
-            <div className={`${checkModule(index) ? "card-meta" : "card-meta-rev" } shadow`}>
+
+      {/* Projects */}
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <article key={project.id} className="project-card">
+            <h4 className="tittle">
+              <a href={project.link} target="_blank" rel="noreferrer">
+                {project.title}
+              </a>
+            </h4>
+
+            <div className={`${checkModule(index) ? "card-meta" : "card-meta-rev"} shadow`}>
               <div className="pic-cour">
-                {c.imageUrl.map((img)=>(
-                  <a href={c.link} target="_blank" rel="noreferrer">
-                    <img src={img} alt="name project"></img>
+                {project.imageUrl.map((img, i) => (
+                  <a key={i} href={project.link} target="_blank" rel="noreferrer">
+                    <img src={img} alt={`${project.title} screenshot`} />
                   </a>
                 ))}
               </div>
-              <div className="work-description"> 
-                <div className="paragraph-descrition link">{c.subTitle}</div>
 
-                <div className="paragraph-descrition" dangerouslySetInnerHTML={createMarkup(c.description)}></div>
+              <div className="work-description">
+                <div className="paragraph-description link">{project.subTitle}</div>
+                <div
+                  className="paragraph-description"
+                  dangerouslySetInnerHTML={createMarkup(project.description)}
+                />
                 <div>
-                  <div className="static">
-                    Front-Stack: 
-                  </div>
-                    <div className="frontend-stack-pastwork" dangerouslySetInnerHTML={createMarkup(c.frontTechSatck)}></div>
+                  <span className="static">Frontend Stack:</span>
+                  <div
+                    className="frontend-stack-pastwork"
+                    dangerouslySetInnerHTML={createMarkup(project.frontTechSatck)}
+                  />
                 </div>
                 <div>
-                  <div className="static">
-                    Backend-Stack: 
-                  </div>
-                    <div className="frontend-stack-pastwork" dangerouslySetInnerHTML={createMarkup(c.backTechStack)}></div>
-                    </div>
-              </div>
+                  <span className="static">Backend Stack:</span>
+                  <div
+                    className="frontend-stack-pastwork"
+                    dangerouslySetInnerHTML={createMarkup(project.backTechStack)}
+                  />
+                </div>
               </div>
             </div>
-            <hr></hr>
-          </div>
+
+            <hr />
+          </article>
         ))}
       </div>
+    </section>
+  );
+};
 
-    </div>
-    )}
-  
 export default PastWork;
