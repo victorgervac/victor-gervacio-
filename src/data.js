@@ -16,6 +16,31 @@ export const describeLine=`
   <strong>front and back end</strong> work as well as <strong>testing</strong> and performance.
 `
 
+
+export const techStack = [
+  {
+    icon: "diamond",
+    label: "Ruby on Rails",
+    color: "ruby",
+    link: "https://rubyonrails.org/",
+    description: "A powerful backend framework focused on convention over configuration."
+  },
+  {
+    icon: "js",
+    label: "JavaScript",
+    color: "javascript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    description: "The programming language of the web, essential for interactivity."
+  },
+  {
+    icon: "react",
+    label: "React",
+    color: "react",
+    link: "https://react.dev/",
+    description: "A modern library for building user interfaces with components."
+  }
+
+];
 export const projects = [
   {
     id: 3,
@@ -64,11 +89,11 @@ export const githubDescription =`
 My <strong>GitHub</strong> contains the repositories of projects I have worked on, both current and past. Through an API call, I have fetched and created this carousel of my repositories and my github activity. explore more at my GitHub.
 `
 export const aboutMe = `
-  Hello, I am Victor somethings about me. I completed a <strong>full-stack software developer</strong> certificate offered by the University of Utah.  
-  I enjoy <strong>solving problems</strong> and working in an environment where I can <strong>learn from others</strong> and contribute to a solution.
-  <br>
-  <br>
-  I also enjoy all things outdoors from snow sports to hiking and biking.  
-  I have attended many <strong>leadership conferences</strong>.
-  My interests include all areas of development including application <strong>front and back end</strong> work, as well as <strong>testing and performance</strong>.
+<p>Hello, I'm Victor! I am a <strong>full-stack software developer</strong> certified by the University of Utah.</p> 
+
+<p>I enjoy <strong>solving problems</strong> and working in environments where I can <strong>learn from others</strong> and contribute to building meaningful solutions.</p>
+
+<p>Outside of coding, I’m passionate about the outdoors — from <strong>hiking</strong>, <strong>biking</strong>, and <strong>snow sports</strong> to simply exploring nature.</p>
+
+<p>I've participated in several <strong>leadership conferences</strong> and am always seeking ways to grow both personally and professionally. My technical interests span across <strong>front-end and back-end development</strong>, along with a focus on <strong>testing</strong> and <strong>performance optimization</strong>.</p>
 `

@@ -22,16 +22,18 @@ const Github = () => {
         <Icon name="github" /> Github
       </a>
       <div className="grid-container">
-        <div
-          className="github-paragraph"
-          dangerouslySetInnerHTML={createMarkup(githubDescription)}
-        />
+        <div style={{display: "flex ", flexDirection: "row"}}>
+          <div
+            className="github-paragraph"
+            dangerouslySetInnerHTML={createMarkup(githubDescription)}
+          />
+          <GithubCard />
+        </div>
         <img 
           src="https://ghchart.rshah.org/victorgervac" 
           alt="GitHub Contributions Chart" 
-          style={{ width: "100%", height: "auto", marginTop: "2rem" }}
+          style={{ width: "90%", height: "auto", marginTop: "2rem" ,marginLeft: "2rem",marginBottom: "2rem"  }}
         />
-        <GithubCard />
       </div>
     </div>
   );

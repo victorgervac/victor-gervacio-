@@ -16,7 +16,6 @@ function App() {
         <div className="overflow-hidden">
           <main>
             <Switch>
-              
               <Route exact path="/" component={WelcomePage} />
               <Route component={NoMatch} />
             </Switch>

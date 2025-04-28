@@ -1,29 +1,49 @@
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "semantic-ui-react";
 import { aboutMe } from "../data";
 import ContactComponent from "./ContactComponent";
-import  { ReactComponent as VictorMan1 } from '../assets/images/victor-man1.svg' 
-import "../styles/AboutComponent.css"
+import { ReactComponent as VictorMan1 } from "../assets/images/victor-man1.svg";
+import "../styles/AboutComponent.css";
 
-function createMarkup(markup){
-  return {__html: markup}
- }
-const AboutComponent =()=>{
+function createMarkup(markup) {
+  return { __html: markup };
+}
+
+const AboutComponent = () => {
+  const aboutRef = useRef();
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aboutRef.current) {
+        const top = aboutRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) { // Adjust -100 for when it triggers
+          setAnimate(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // in case it's already visible
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="connectCard"> 
-     <div className="svg-man">
-        <VictorMan1/>
+    <div
+      className={`connectCard ${animate ? "animate" : ""}`}
+      ref={aboutRef}
+    >
+      <div className="svg-man">
+        <VictorMan1 />
       </div>
-    <div className="content">
-      <h1 className="component-header">
-        About
-      </h1>
-       {/* <a className="component-header github" href="https://github.com/victorgervac" target="_blank" rel="noreferrer"><Icon name="user"></Icon>About</a> */}
-      <div className="about"dangerouslySetInnerHTML={createMarkup(aboutMe)} >
-     
-      </div>
-      <ContactComponent/>
+      <div className="content">
+        <h1 className="component-header-connect">About</h1>
+        <div className="about" dangerouslySetInnerHTML={createMarkup(aboutMe)} />
+        <ContactComponent />
       </div>
     </div>
-  )
-}
+  );
+};
+
 export default AboutComponent;
