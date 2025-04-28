@@ -27,19 +27,21 @@
   border-radius: 12px;
   margin-right: 10px;
 }
-.card-meta{
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-}
+
 @media only screen and (min-width: 730px) {
   .card-meta-rev{
     display: flex;
     flex-direction: row-reverse;
-}
+  }
+  .card-meta{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  
 }
 @keyframes slide {
   0% { transform: translateX(0); }

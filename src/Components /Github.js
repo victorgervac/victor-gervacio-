@@ -22,7 +22,7 @@ const Github = () => {
         <Icon name="github" /> Github
       </a>
       <div className="grid-container">
-        <div style={{display: "flex ", flexDirection: "row"}}>
+        <div className="paragraph-cards">
           <div
             className="github-paragraph"
             dangerouslySetInnerHTML={createMarkup(githubDescription)}
