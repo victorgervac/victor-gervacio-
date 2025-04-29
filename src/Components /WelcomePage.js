@@ -46,9 +46,9 @@ const WelcomePage = () => {
       {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <a href="#past-work" aria-label="Scroll to portfolio">
-          <div className="chevron"></div>
-          <div className="chevron"></div>
-          <div className="chevron"></div>
+          <i class="fa-solid fa-chevron-down chevron"></i>
+          <i class="fa-solid fa-chevron-down chevron"></i>
+          <i class="fa-solid fa-chevron-down chevron"></i>
           <span className="scroll-text">View Portfolio</span>
         </a>
       </div>
