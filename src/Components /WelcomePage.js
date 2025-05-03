@@ -5,6 +5,9 @@ import Github from "./Github";
 import NavBar from "./NavBar";
 import PastWork from "./PastWork";
 import { describeLine } from "../data";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee  ,faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 
 import "../styles/WelcomePage.css";
 import "../styles/NavBarStyles.css";
@@ -46,9 +49,11 @@ const WelcomePage = () => {
       {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <a href="#past-work" aria-label="Scroll to portfolio">
-          <i class="fa-solid fa-chevron-down chevron"></i>
-          <i class="fa-solid fa-chevron-down chevron"></i>
-          <i class="fa-solid fa-chevron-down chevron"></i>
+          <div className="text-3xl font-bold underline">
+            <FontAwesomeIcon icon={faChevronDown} />
+            <FontAwesomeIcon icon={faChevronDown} />
+            <FontAwesomeIcon icon={faChevronDown} />
+          </div>
           <span className="scroll-text">View Portfolio</span>
         </a>
       </div>
