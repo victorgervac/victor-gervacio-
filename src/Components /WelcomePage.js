@@ -18,7 +18,7 @@ const createMarkup = (markup) => ({ __html: markup });
 
 const WelcomePage = () => {
   return (
-    <div className="container">
+    <div className="container connectCard">
       <div className="navigation-component">
         <NavBar />
       </div>

@@ -54,6 +54,28 @@
   margin-top: 20px; 
   gap: 1rem;
 }
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.connectCard {
+  /* Existing styles... */
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* Optional: only trigger animation when it's visible */
+.connectCard.animate {
+  opacity: 1;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
