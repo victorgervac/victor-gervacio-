@@ -18,14 +18,14 @@ const AboutComponent = () => {
       if (aboutRef.current) {
         const top = aboutRef.current.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (top < windowHeight - 100) { // Adjust -100 for when it triggers
+        if (top < windowHeight - 100) { 
           setAnimate(true);
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // in case it's already visible
+    handleScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
