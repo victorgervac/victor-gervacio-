@@ -1,7 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+@import './tailwind.css';
 :root {
   --black-color:#00000C;
   --white-color: #F2F2F2;
