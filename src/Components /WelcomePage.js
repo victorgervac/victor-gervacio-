@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import PastWork from "./PastWork";
 import { describeLine } from "../data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee  ,faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import "../styles/WelcomePage.css";
@@ -18,13 +18,13 @@ const createMarkup = (markup) => ({ __html: markup });
 
 const WelcomePage = () => {
   return (
-    <div className="container connectCard">
+    <div className="container">
       <div className="navigation-component">
         <NavBar />
       </div>
 
       {/* Landing Section */}
-      <section className="landing-content">
+      <section className="landing-content connectCard">
         <div className="text-section">
           <h1 className="hello-line">
             Hi, I'm <span className="highlighted-name">Victor</span>
