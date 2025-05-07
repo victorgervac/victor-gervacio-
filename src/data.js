@@ -3,6 +3,7 @@ import devLogin from "./assets/images/DevLogin.png"
 import devWelcome from "./assets/images/DevWelcome.png"
 import devSignin from  "./assets/images/DevSigin.png"
 import amazoneclone from "./assets/images/Amazoneclone.png"
+import amazonecloneOne from "./assets/images/amazoneClone1.png"
 import amazoneshop from "./assets/images/AmazoneShoppingCart.png"
 import amazonelog from "./assets/images/AmazoneLogin.png"
 import aceApps from "./assets/images/AceLogoFull.png"
@@ -45,7 +46,7 @@ export const projects = [
   {
     id: 3,
     title: "ACE Apps" , 
-    imageUrl: [aceApps,aceProj,aceTerm],
+    imageUrl: [aceApps,aceProj,aceTerm,],
     description: 
     `ACE Apps caters to our members and staff. Built with <strong>Rails, Tailwind, and JavaScript</strong>, along with other Rails <strong>gems </strong>including Stimulus and many more, it renders a cluster of Rails applications with user-friendly integrations that support <strong>ACE's mission</strong>. This app cluster includes tools for member, project, contracts, and time management.`,
     frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>Javascript</strong> "," <strong>Tailwind</strong>"],
@@ -69,7 +70,7 @@ export const projects = [
   {
     id: 2,
     title: "Amazone Clone" , 
-    imageUrl: [amazoneclone,amazoneshop,amazonelog],
+    imageUrl: [amazoneclone,amazonecloneOne,amazoneshop,amazonelog],
     description: 
     `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
     while writing <strong>JSX</strong>. Follow the link to open the app,
