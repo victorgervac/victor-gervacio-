@@ -12,7 +12,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import "../styles/WelcomePage.css";
 import "../styles/NavBarStyles.css";
 
-const FRONT_END = "I'm a <strong>Full-Stack Software Developer</strong> 🚀";
+const FRONT_END = "I'm a <strong>Full-Stack Software Developer</strong> ";
 
 const createMarkup = (markup) => ({ __html: markup });
 

@@ -17,10 +17,9 @@ export const describeLine=`
   <strong>front and back end</strong> work as well as <strong>testing</strong> and performance.
 `
 
-
 export const techStack = [
   {
-    icon: "diamond",
+    icon: "ruby",
     label: "Ruby on Rails",
     color: "ruby",
     link: "https://rubyonrails.org/",
@@ -39,6 +38,13 @@ export const techStack = [
     color: "react",
     link: "https://react.dev/",
     description: "A modern library for building user interfaces with components."
+  },
+  {
+    icon: "swift",
+    label: "Swift",
+    color: "swift",
+    link: "https://www.swift.org/",
+    description: "A general-purpose programming language that’s approachable for newcomers and powerful for experts."
   }
 
 ];

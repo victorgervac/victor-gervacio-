@@ -1,21 +1,32 @@
 import React from "react";
-import { Icon } from 'semantic-ui-react';
+// import { Icon } from 'semantic-ui-react';
+import { faReact, faSwift,faSquareJs, faSketch } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { projects,techStack } from "../data";
 import "../styles/PastWork.css";
 
 const checkModule = (index) => index % 2 === 0;
 
+const TACOS = {
+  react: faReact,
+  swift: faSwift,
+  js: faSquareJs,
+  ruby: faSketch,
+};
 
 
-const TechBadge = ({ icon, label, color, link, description }) => (
+const TechBadge = ({ icon, label, color, link, description }) => {
+  let iconObject = TACOS[icon]
+  console.log(icon)
+ return(
   <a href={link} target="_blank" rel="noreferrer" className={`tech-badge ${color}`}>
-    <Icon name={icon} />
+    <FontAwesomeIcon icon={iconObject} />
     <div className="tech-badge-text">
       <span className="tech-badge-label">{label}</span>
       <small className="tech-badge-description">{description}</small>
     </div>
   </a>
-);
+)};
 
 const PastWork = () => {
 

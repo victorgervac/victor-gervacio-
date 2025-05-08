@@ -1,35 +1,27 @@
-import { Icon } from "semantic-ui-react"
-const NavBar=()=>{
-  return(
-    <nav className="navigation">
-      <a href="#svg-id" id="victor-link" className="nav-link">Victor</a>
-  
-      <a href="#past-work" className="icon" id="work-icon">
-        <Icon name="code" size="large"></Icon>
-      </a>
-      <a href="#past-work" id="work-link" className="nav-link">Work</a>
+import React, { useState } from "react";
+import { Icon } from "semantic-ui-react";
 
-      <a href="#github" className="icon" id="github-icon">
-        <Icon name="github" size="large"></Icon>
-      </a>
-      <a href="#github" id="github-link" className="nav-link">
-        Github
-      </a>
 
-      <a href="#contact-id" className="icon"id="contact-icon">
-        <Icon name="envelope outline" size="large"></Icon>
-      </a>
+const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <a href="#about-id" className="icon" id="about-icon" >
-      <Icon name="user" size="large"></Icon>
-      </a>
-      <a href="#about-id" id="about" className="nav-link">
-        About
-      </a>
-      <a href="#contact-id" id="contact" className="nav-link">
-        Contact
-      </a>
+  return (
+    <nav className={`navigation ${menuOpen ? "open" : ""}`}>
+      {/* Hamburger icon */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <Icon name="bars" size="large" />
+      </div>
+
+      {/* Nav links container */}
+      <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+        <a href="#svg-id" className="nav-link">Victor</a>
+        <a href="#past-work" className="nav-link">Work</a>
+        <a href="#github" className="nav-link">Github</a>
+        <a href="#about-id" className="nav-link">About</a>
+        <a href="#contact-id" className="nav-link">Contact</a>
+      </div>
     </nav>
-  )
-}
+  );
+};
+
 export default NavBar;
