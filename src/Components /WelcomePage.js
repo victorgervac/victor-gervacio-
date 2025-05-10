@@ -49,7 +49,7 @@ const WelcomePage = () => {
       {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <a href="#past-work" aria-label="Scroll to portfolio">
-          <div className="text-3xl font-bold underline">
+          <div className="chevrons">
             <FontAwesomeIcon icon={faChevronDown} />
             <FontAwesomeIcon icon={faChevronDown} />
             <FontAwesomeIcon icon={faChevronDown} />
