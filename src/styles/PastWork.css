@@ -5,7 +5,9 @@
   max-width: 500px;
   margin: 0 auto;
 }
-
+.tech-stack-header{
+  color:white;
+}
 .project-images-inner {
   display: flex;
   animation: slide 20s infinite linear;
