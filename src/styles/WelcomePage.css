@@ -31,7 +31,7 @@ html {
   min-width: 280px;
 }
 
-.image-section {
+.animated-person {
   flex: 1;
   min-width: 280px;
   display: flex;
@@ -197,4 +197,73 @@ html {
 
 .chevrons svg:nth-child(3) {
   animation-delay: 0.3s;
+}
+
+
+.animated-person #head {
+  animation: nod 2s infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+.animated-person #arm-hand-tablet {
+  animation: tap 1.5s infinite ease-in-out;
+  transform-origin: top right;
+}
+
+.animated-person #tablet {
+  animation: glow 1s infinite alternate;
+}
+
+/* Animations */
+@keyframes nod {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes tap {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes glow {
+  from { fill: #999; }
+  to { fill: #00f7ff; }
+}
+
+#desktopSentenceTop,
+#desktopSentenceMid,
+#desktopSentenceLast {
+  opacity: 0;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#desktopSentenceTop {
+  animation-name: fadeTop;
+}
+
+#desktopSentenceMid {
+  animation-name: fadeMid;
+}
+
+#desktopSentenceLast {
+  animation-name: fadeLast;
+}
+
+@keyframes fadeTop {
+  0%, 20% { opacity: 1; }
+  25%, 100% { opacity: 0; }
+}
+
+@keyframes fadeMid {
+  0%, 20% { opacity: 0; }
+  25%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes fadeLast {
+  0%, 45% { opacity: 0; }
+  50%, 70% { opacity: 1; }
+  75%, 100% { opacity: 0; }
 }

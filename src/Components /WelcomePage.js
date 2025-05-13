@@ -41,7 +41,7 @@ const WelcomePage = () => {
           />
         </div>
 
-        <div className="image-section">
+        <div className="animated-person">
           <VictorMan1 className="landing-image" />
         </div>
       </section>
