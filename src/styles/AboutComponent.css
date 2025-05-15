@@ -17,6 +17,13 @@
   width: 100%;
   height: auto;
   max-height: 500px;
+
+}
+.head{
+  color: red;
+}
+.body{
+  color: red;
 }
 
 .content {

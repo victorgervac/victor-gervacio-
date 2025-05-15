@@ -19,10 +19,6 @@ const createMarkup = (markup) => ({ __html: markup });
 const WelcomePage = () => {
   return (
     <div className="container">
-      <div className="navigation-component">
-        <NavBar />
-      </div>
-
       {/* Landing Section */}
       <section className="landing-content connectCard">
         <div className="text-section">
@@ -56,6 +52,9 @@ const WelcomePage = () => {
           </div>
           <span className="scroll-text">View Portfolio</span>
         </a>
+      </div>
+      <div className="navigation-component">
+        <NavBar />
       </div>
 
       {/* Other Sections */}

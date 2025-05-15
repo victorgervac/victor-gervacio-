@@ -160,6 +160,7 @@ html {
   opacity: 1;
   animation: fadeSlideUp 1s ease-out forwards;
 }
+
 @keyframes moveDown {
   0% {
     transform: translateY(0);
