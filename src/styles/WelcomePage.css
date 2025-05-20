@@ -267,3 +267,30 @@ html {
   50%, 70% { opacity: 1; }
   75%, 100% { opacity: 0; }
 }
+
+
+#laptopscreen{
+  animation: fadeinout  5s infinite;
+ 
+}
+@keyframes movement {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+   transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
