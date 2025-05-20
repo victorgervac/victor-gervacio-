@@ -19,12 +19,6 @@
   max-height: 500px;
 
 }
-.head{
-  color: red;
-}
-.body{
-  color: red;
-}
 
 .content {
   flex: 1;
@@ -132,4 +126,7 @@
     animation: fadeSlideUp 1s ease-out forwards;
   }
   
+}
+#whole-body{
+  color: var(--shirt-color);
 }
