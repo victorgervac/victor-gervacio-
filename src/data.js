@@ -93,7 +93,8 @@ export const projects = [
 //   }
 ]
 export const githubDescription =` 
-My <strong>GitHub</strong> contains the repositories of projects I have worked on, both current and past. Through an API call, I have fetched and created this carousel of my repositories and my github activity. explore more at my GitHub.
+My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>,<strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React, and Swift. Using an API call, I’ve fetched and created this carousel to display my repositories and GitHub activity.
+Explore more on my GitHub!
 `
 export const aboutMe = `
 <p>Hello, I'm Victor! I am a <strong>full-stack software developer</strong> certified by the University of Utah.</p> 
