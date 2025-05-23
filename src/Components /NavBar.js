@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className={`navigation ${menuOpen ? "open" : ""}`}>
       {/* Hamburger icon */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className={`hamburger ${menuOpen ? "show" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
         <Icon name="bars" size="large" />
       </div>
 

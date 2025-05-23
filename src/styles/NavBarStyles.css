@@ -13,6 +13,7 @@
   display: none;
   cursor: pointer;
   color: var(--white-color);
+  
 }
 
 .nav-links {
@@ -39,12 +40,13 @@
 
   .nav-links {
     display: none;
-    flex-direction: column;
     width: 100%;
-    background-color: var(--navsm-bg-color);
+
     padding: 1rem;
   }
-
+  .hamburger.show{
+    background-color:var(--turquoise-color);
+  }
   .nav-links.show {
     display: flex;
   }
