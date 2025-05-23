@@ -41,11 +41,14 @@
   .nav-links {
     display: none;
     width: 100%;
-
     padding: 1rem;
   }
   .hamburger.show{
-    background-color:var(--turquoise-color);
+    background-color: gray;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    border-radius: 10px;
+
   }
   .nav-links.show {
     display: flex;
