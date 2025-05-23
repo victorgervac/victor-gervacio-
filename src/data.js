@@ -93,7 +93,7 @@ export const projects = [
 //   }
 ]
 export const githubDescription =` 
-My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>,<strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React, and Swift. Using an API call, I’ve fetched and created this carousel to display my repositories and GitHub activity.
+My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>, <strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React and Swift. Using an API call, I’ve fetched and created this carousel to display my repositories and GitHub activity.
 Explore more on my GitHub!
 `
 export const aboutMe = `
