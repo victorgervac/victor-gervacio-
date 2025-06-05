@@ -1,15 +1,16 @@
 .calendar-days {
   background-color: #333;
-  display: inline-block;
   color: white;
   height: auto;
-  width: auto;
+  width: 180px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0;
   text-decoration: none;
   border-radius: 12px;
-  border: none; /* or use a soft 1px shadow instead */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  flex: 0 0 180px; 
+  box-sizing: border-box;
 }
 
 .sub-card {
@@ -17,13 +18,15 @@
   padding: 1rem;
   border-radius: 10px;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   color: #000;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-
 }
 
 .sub-tittle {
@@ -62,12 +65,9 @@
   display: flex;
   overflow-x: auto;
   padding: 1rem;
-  gap: 1rem;
+  gap: 1rem; /* Controls spacing between cards */
   scroll-snap-type: x mandatory;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .scrolling-wrapper > * {
