@@ -17,28 +17,30 @@ const GithubCard = () => {
       );
 
       const sortedRepos = res.data.sort(
-        (a, b) => b.stargazers_count - a.stargazers_count
+        (a, b) => new Date(b.pushed_at) - new Date(a.pushed_at)
       );
 
-      setRepos(sortedRepos);
+      setRepos(sortedRepos.slice(0, 20)); 
     } catch (err) {
       toast.error("Could not load GitHub repositories.");
     }
   }
-
-  
 
   return (
     <div className="scrolling-wrapper">
       {repos.map((repo) => (
         <div key={repo.id} className="calendar-days rounded">
           <div className="sub-card rounded">
-          <h4>
-            <b>{repo.name}</b> 
-            {repo.stargazers_count > 0 && (
-              <Icon name="star" color="yellow" style={{ marginLeft: "0.5rem" }} />
-            )}
-          </h4>
+            <h4>
+              <b>{repo.name}</b>
+              {repo.stargazers_count > 0 && (
+                <Icon
+                  name="star"
+                  color="yellow"
+                  style={{ marginLeft: "0.5rem" }}
+                />
+              )}
+            </h4>
             <b className="sub-tittle">{repo.language || "Unknown"}</b>
             <p>{repo.description || "No description provided."}</p>
             <a
