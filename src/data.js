@@ -9,6 +9,10 @@ import amazonelog from "./assets/images/AmazoneLogin.png"
 import aceApps from "./assets/images/AceLogoFull.png"
 import aceProj from "./assets/images/ace_proj.png"
 import aceTerm from "./assets/images/ace_term.png"
+import profileEdit from "./assets/images/profileEdit.png"
+import condoLogin from "./assets/images/condoLogin.png"
+import dashboard from "./assets/images/dashboard.png"
+import reservations from "./assets/images/reservations.png"
 
 export const describeLine=`
   who seeks the challenge of <strong>solving</strong> real world problems 
@@ -49,6 +53,19 @@ export const techStack = [
 
 ];
 export const projects = [
+
+  {
+    id: 5,
+    title: "Property Operations Dashboard" , 
+    imageUrl: [condoLogin,profileEdit,dashboard,reservations],
+    description: 
+    `A full-stack <strong>Ruby on Rails</strong> application built to streamline property management workflows for short-term rentals. The platform integrates with the <strong>Hostaway API</strong> to fetch and sync real-time listings, reservations to construct expenses and cleaning tasks. Provides CRUD operations and Dynamically calculates weekly performance trends and changes in activity across key metrics.`,
+    frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>PostgreSQ</strong> "," <strong>Tailwind</strong>","<strong>Stimulus.js</strong>"],
+    backTechStack:["<strong>Hostaway API </strong>"],
+    subTitle: 'Property and expense tracker',
+    link: `/`
+  },
+  
   {
     id: 3,
     title: "ACE Apps" , 
