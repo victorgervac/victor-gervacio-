@@ -76,6 +76,19 @@ export const projects = [
     backTechStack:["<strong>Ruby on Rail</strong>", "<strong>SQL</strong>"],
     subTitle: 'American Conservation Experience',
     link: `https://projects.usaconservation.org/`
+  }, 
+  {
+    id: 2,
+    title: "Amazone Clone" , 
+    imageUrl: [amazoneclone,amazonecloneOne,amazoneshop,amazonelog],
+    description: 
+    `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
+    while writing <strong>JSX</strong>. Follow the link to open the app,
+    and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
+    frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
+    backTechStack:["<strong>Firebase</strong>"],
+    subTitle: 'Amazone React Clone',
+    link: `https://clone-9de46.web.app/`
   },
   {
     id: 1,
@@ -90,19 +103,7 @@ export const projects = [
     subTitle: 'DevTracker React/Ruby Application',
     link:"",
   },
-  {
-    id: 2,
-    title: "Amazone Clone" , 
-    imageUrl: [amazoneclone,amazonecloneOne,amazoneshop,amazonelog],
-    description: 
-    `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
-    while writing <strong>JSX</strong>. Follow the link to open the app,
-    and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
-    frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
-    backTechStack:["<strong>Firebase</strong>"],
-    subTitle: 'Amazone React Clone',
-    link: `https://clone-9de46.web.app/`
-  },
+
 //   {
 //     id: 3,
 //     title: "Breaking Bad Type Ahead",
