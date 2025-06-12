@@ -11,9 +11,11 @@
 .project-images-inner {
   display: flex;
   animation: slide 20s infinite linear;
-  width: calc(500px * 3); 
+  /* width: calc(500px * 3);  */
+  width: fit-content;
 }
-.work-description{
+.work-description{  
+width: fit-content;
  color: var(--description-words-color);
  margin-top: 1rem;
  margin-left: 2rem;
@@ -30,7 +32,7 @@
   margin-right: 10px;
 }
 
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 950px) {
   .card-meta-rev{
     display: flex;
     flex-direction: row-reverse;
