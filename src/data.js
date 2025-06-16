@@ -71,7 +71,7 @@ export const projects = [
     title: "ACE Apps" , 
     imageUrl: [aceApps,aceProj,aceTerm,],
     description: 
-    `ACE Apps caters to our members and staff. Built with <strong>Rails, Tailwind, and JavaScript</strong>, along with other Rails <strong>gems </strong>including Stimulus and many more, it renders a cluster of Rails applications with user-friendly integrations that support <strong>ACE's mission</strong>. This app cluster includes tools for member, project, contracts, and time management.`,
+    `ACEapps is a custom non-profit contract management suite of applications including reimbursement tracking, time tracking, invoicing, contract management, project management, and scheduling. Built with Rails, Tailwind, and JavaScript, along with other <strong> Rails gems including Stimulus</strong> and many more, it renders a cluster of <strong> Rails </strong> applications with user-friendly integrations that support thousands of users for ACE's mission.`,
     frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>Javascript</strong> "," <strong>Tailwind</strong>"],
     backTechStack:["<strong>Ruby on Rail</strong>", "<strong>SQL</strong>"],
     subTitle: 'American Conservation Experience',
