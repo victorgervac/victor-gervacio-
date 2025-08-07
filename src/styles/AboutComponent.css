@@ -8,16 +8,21 @@
   min-height: 90vh;
 }
 
-.svg-man {
+#svg-man {
   flex: 1;
   max-width: 400px;
+  color:white;
 }
 
 .svg-man svg {
   width: 100%;
   height: auto;
   max-height: 500px;
-
+  
+  
+}
+.svg-man body{
+  color: red;
 }
 
 .content {
@@ -86,8 +91,9 @@
     padding: 2rem 1rem;
   }
 
-  .svg-man {
+  #svg-man {
     max-width: 300px;
+    color:red
   }
 
   .content {
@@ -115,12 +121,11 @@
   }
   
   .connectCard {
-    /* Existing styles... */
+  
     animation: fadeSlideUp 1s ease-out forwards;
-    opacity: 0; /* Start hidden */
+    opacity: 0; 
   }
   
-  /* Optional: only trigger animation when it's visible */
   .connectCard.animate {
     opacity: 1;
     animation: fadeSlideUp 1s ease-out forwards;
