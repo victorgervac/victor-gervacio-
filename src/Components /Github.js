@@ -27,8 +27,10 @@ const Github = () => {
       if (calendarRef.current && typeof window.GitHubCalendar === "function") {
         GitHubCalendar(".calendar", "victorgervac", {
           responsive: true,
-          proxy: (victorgervac) =>
-            fetch(`/.netlify/functions/githubProxy?user=${victorgervac}`)
+          proxy(victorgervac) {
+            return fetch(`https://github-contributions-api.deno.dev/${victorgervac}.json`)
+              .then((r) => r.json());
+          }
         });
       }
     };
