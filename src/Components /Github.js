@@ -17,17 +17,17 @@ const Github = () => {
   
   const calendarRef = useRef(null); 
 
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js";
     script.async = true;
     script.onload = () => {
       if (calendarRef.current && typeof window.GitHubCalendar === "function") {
-        window.GitHubCalendar(calendarRef.current, "victorgervac", {
+        GitHubCalendar(".calendar", "victorgervac", {
           responsive: true,
-          proxy: (victorgervac) => {
-            return fetch(`https://your-proxy.com/github?user=${victorgervac}`);
-          }
+          proxy: (username) =>
+            fetch(`/.netlify/functions/githubProxy?user=${username}`)
         });
       }
     };
