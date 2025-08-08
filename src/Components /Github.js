@@ -27,8 +27,8 @@ const Github = () => {
       if (calendarRef.current && typeof window.GitHubCalendar === "function") {
         GitHubCalendar(".calendar", "victorgervac", {
           responsive: true,
-          proxy: (username) =>
-            fetch(`/.netlify/functions/githubProxy?user=${username}`)
+          proxy: (victorgervac) =>
+            fetch(`/.netlify/functions/githubProxy?user=${victorgervac}`)
         });
       }
     };
