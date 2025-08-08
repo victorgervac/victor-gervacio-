@@ -16,7 +16,7 @@ function createMarkup(markup) {
 const Github = () => {
   
   const calendarRef = useRef(null); 
-  
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js";
@@ -25,8 +25,8 @@ const Github = () => {
       if (calendarRef.current && typeof window.GitHubCalendar === "function") {
         window.GitHubCalendar(calendarRef.current, "victorgervac", {
           responsive: true,
-          proxy: (username) => {
-            return fetch(`https://your-proxy.com/github?user=${username}`);
+          proxy: (victorgervac) => {
+            return fetch(`https://your-proxy.com/github?user=${victorgervac}`);
           }
         });
       }

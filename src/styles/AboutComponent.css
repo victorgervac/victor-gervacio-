@@ -7,6 +7,15 @@
   flex-wrap: wrap;
   min-height: 90vh;
 }
+.contrib-number{
+  color: white !important;
+}
+@media screen and (min-width: 768px){
+  div.float-right{
+    padding: 0 14px 10px 3px !important;
+    line-height: 4;
+  }
+}
 
 #svg-man {
   flex: 1;
