@@ -7,6 +7,7 @@ import GithubCard from "./GithubCard";
 import { githubDescription } from "../data";
 import { useEffect, useRef } from "react";
 import "github-calendar/dist/github-calendar-responsive.css";
+import GitHubCalendar from "github-calendar";
 
 
 function createMarkup(markup) {
