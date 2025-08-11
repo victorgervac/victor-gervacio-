@@ -22,18 +22,20 @@ const Github = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js";
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css";
+    document.head.appendChild(link);
+    
     script.async = true;
     script.onload = () => {
       if (calendarRef.current && typeof window.GitHubCalendar === "function") {
         GitHubCalendar(".calendar", "victorgervac", {
-          responsive: true,
-          proxy(victorgervac) {
-            return fetch(`https://github-contributions-api.deno.dev/${victorgervac}.json`)
-              .then((r) => r.json());
-          }
+          responsive: true
         });
       }
     };
+    debugger
     document.body.appendChild(script);
   }, []);
 
