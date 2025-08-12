@@ -17,22 +17,6 @@
   }
 }
 
-#svg-man {
-  flex: 1;
-  max-width: 400px;
-  color:white;
-}
-
-.svg-man svg {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  
-  
-}
-.svg-man body{
-  color: red;
-}
 
 .content {
   flex: 1;
