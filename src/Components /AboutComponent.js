@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { Icon } from "semantic-ui-react";
 import { aboutMe } from "../data";
 import ContactComponent from "./ContactComponent";
-import { ReactComponent as VictorMan1 } from "../assets/images/victor-man1.svg";
+import { ReactComponent as WholeGuy } from "../assets/images/whole_guy.svg";
 import "../styles/AboutComponent.css";
 
 function createMarkup(markup) {
@@ -35,7 +34,7 @@ const AboutComponent = () => {
       ref={aboutRef}
     >
       <div className="svg-man">
-        <VictorMan1 />
+        <WholeGuy />
       </div>
       <div className="content">
         <h1 className="component-header-connect">About</h1>
