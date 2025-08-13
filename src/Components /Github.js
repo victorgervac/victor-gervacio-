@@ -35,7 +35,6 @@ const Github = () => {
         });
       }
     };
-    debugger
     document.body.appendChild(script);
   }, []);
 
