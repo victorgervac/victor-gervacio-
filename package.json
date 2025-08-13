@@ -15,7 +15,6 @@
     "framer-motion": "7",
     "github-calendar": "^2.3.4",
     "gsap": "^3.6.0",
-    "node-fetch": "2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-toast": "^2.2.0",
