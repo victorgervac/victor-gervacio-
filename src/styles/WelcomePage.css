@@ -16,34 +16,28 @@ html {
   background-color: var(--main-bg-color);
 }
 
-/* Landing Section */
 .landing-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 3rem 2rem;
-  gap: 2rem; */
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  min-height: 100vh;
 }
 
-.text-section {
-  flex: 1;
-  min-width: 280px;
-}
-
+.text-section,
 .animated-person {
-  flex: 1;
-  min-width: 280px;
-  display: flex;
-  justify-content: center;
+  flex: 1; 
+  min-width: 300px;
+  padding: 1rem;
 }
+
 
 .landing-image {
   width: 100%;
   max-width: 500px;
   height: auto;
 }
-/* Text Styling */
+
 .hello-line {
   font-size: 3rem;
   font-weight: 600;
@@ -150,13 +144,13 @@ html {
   }
 }
 
-.connectCard {
+.connect-card {
 
   animation: fadeSlideUp 1s ease-out forwards;
   opacity: 0;
 }
 
-.connectCard.animate {
+.connect-card.animate {
   opacity: 1;
   animation: fadeSlideUp 1s ease-out forwards;
 }
@@ -293,4 +287,84 @@ html {
 @keyframes fadeinout {
   0%,100% { opacity: 0; }
   50% { opacity: 1; }
+}
+
+.icon-container {
+  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color:#ffffff;
+  opacity: .5;
+}
+
+.icon-container a {
+  /* Makes the icon adopt the color of its container */
+  color: inherit; 
+  
+  /* Removes the default link underline */
+  text-decoration: none; 
+
+  /* Adds some space horizontally between the icons */
+  margin: 0 0.75rem; 
+
+  /* Smooth transition for the hover color */
+  transition: color 0.2s ease-in-out;
+
+  /* Set the icon font size */
+  font-size: 2rem; /* Adjust size as needed */
+}
+
+/* Change color on hover for better user feedback */
+.icon-container a:hover {
+  color: #007bff; /* Change this to your preferred highlight color */
+}
+
+/*
+ * --- ANIMATIONS ---
+ */
+
+/* 1. Define the animations */
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flipHorizontal {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+/* 2. Apply the animations on hover */
+.icon-container a:nth-child(1) {
+  animation: flipHorizontal 5.0s infinite;
+}
+
+.icon-container a:nth-child(2) {
+  /* animation: spin 5s infinite; */
+  animation: flipHorizontal 5.0s infinite;
+}
+
+.icon-container a:nth-child(3) {
+  animation: flipHorizontal 5.0s infinite;
+}
+
+.icon-container a:nth-child(4) {
+  animation: flipHorizontal 5.0s infinite;
 }

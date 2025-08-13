@@ -6,7 +6,11 @@ import NavBar from "./NavBar";
 import PastWork from "./PastWork";
 import { describeLine } from "../data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown,faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faGithubAlt,faLinkedin,faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+
+
+
 
 
 import "../styles/WelcomePage.css";
@@ -20,7 +24,7 @@ const WelcomePage = () => {
   return (
     <div className="container">
       {/* Landing Section */}
-      <section className="landing-content connectCard">
+      <section className="landing-content connect-card">
         <div className="text-section">
           <h1 className="hello-line">
             Hi, I'm <span className="highlighted-name">Victor</span>
@@ -40,19 +44,24 @@ const WelcomePage = () => {
         <div className="animated-person">
           <VictorMan1 className="landing-image" />
         </div>
+        <div className="icon-container">
+          <a href="#past-work"  aria-label="Scroll to portfolio">
+            <FontAwesomeIcon icon={faBriefcase} />
+          </a>
+          <a href="https://github.com/victorgervac" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithubAlt} />
+          </a>
+
+          <a href="https://www.linkedin.com/in/victorgervacio/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+         
+          <a href="https://stackoverflow.com/users/19621594/itsvic" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faStackOverflow} />
+          </a>
+        </div>
       </section>
 
-      {/* Scroll Indicator */}
-      <div className="scroll-indicator">
-        <a href="#past-work" aria-label="Scroll to portfolio">
-          <div className="chevrons">
-            <FontAwesomeIcon icon={faChevronDown} />
-            <FontAwesomeIcon icon={faChevronDown} />
-            <FontAwesomeIcon icon={faChevronDown} />
-          </div>
-          <span className="scroll-text">View Portfolio</span>
-        </a>
-      </div>
       <div className="navigation-component">
         <NavBar />
       </div>
