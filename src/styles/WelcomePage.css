@@ -351,20 +351,25 @@ html {
   to   { transform: rotateY(360deg); }
 }
 
-/* 2. Apply the animations on hover */
+
+.icon-container a {
+  animation: flipHorizontal 5s infinite;
+  animation-fill-mode: both; /* Keeps the end state before next cycle */
+}
+
+/* Staggered delays */
 .icon-container a:nth-child(1) {
-  animation: flipHorizontal 5.0s infinite;
+  animation-delay: 0s;
 }
 
 .icon-container a:nth-child(2) {
-  /* animation: spin 5s infinite; */
-  animation: flipHorizontal 5.0s infinite;
+  animation-delay: 5s; /* starts after 1 finishes */
 }
 
 .icon-container a:nth-child(3) {
-  animation: flipHorizontal 5.0s infinite;
+  animation-delay: 10s; /* starts after 2 finishes */
 }
 
 .icon-container a:nth-child(4) {
-  animation: flipHorizontal 5.0s infinite;
+  animation-delay: 15s; /* starts after 3 finishes */
 }
