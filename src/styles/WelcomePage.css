@@ -144,15 +144,30 @@ html {
   }
 }
 
-.connect-card {
-
-  animation: fadeSlideUp 1s ease-out forwards;
+.hero-fade {
   opacity: 0;
+  animation: fadeSlideUp 0.7s ease-out forwards;
 }
 
-.connect-card.animate {
-  opacity: 1;
-  animation: fadeSlideUp 1s ease-out forwards;
+.social-icon {
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.25) rotate(8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .social-icon:hover {
+    transform: none;
+  }
 }
 
 @keyframes moveDown {
@@ -319,57 +334,4 @@ html {
 /* Change color on hover for better user feedback */
 .icon-container a:hover {
   color: #007bff; /* Change this to your preferred highlight color */
-}
-
-/*
- * --- ANIMATIONS ---
- */
-
-/* 1. Define the animations */
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes flipHorizontal {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
-}
-
-
-.icon-container a {
-  animation: flipHorizontal 5s infinite;
-  animation-fill-mode: both; /* Keeps the end state before next cycle */
-}
-
-/* Staggered delays */
-.icon-container a:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.icon-container a:nth-child(2) {
-  animation-delay: 5s; /* starts after 1 finishes */
-}
-
-.icon-container a:nth-child(3) {
-  animation-delay: 10s; /* starts after 2 finishes */
-}
-
-.icon-container a:nth-child(4) {
-  animation-delay: 15s; /* starts after 3 finishes */
 }

@@ -25,32 +25,87 @@ export const techStack = [
   {
     icon: "ruby",
     label: "Ruby on Rails",
-    color: "ruby",
+    accent: "#CC342D",
     link: "https://rubyonrails.org/",
     description: "A powerful backend framework focused on convention over configuration."
   },
   {
     icon: "js",
     label: "JavaScript",
-    color: "javascript",
+    accent: "#F7DF1E",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     description: "The programming language of the web, essential for interactivity."
   },
   {
     icon: "react",
     label: "React",
-    color: "react",
+    accent: "#61DAFB",
     link: "https://react.dev/",
     description: "A modern library for building user interfaces with components."
   },
   {
     icon: "swift",
     label: "Swift",
-    color: "swift",
+    accent: "#FA7343",
     link: "https://www.swift.org/",
     description: "A general-purpose programming language that’s approachable for newcomers and powerful for experts."
+  },
+  {
+    icon: "html",
+    label: "HTML5",
+    accent: "#E34F26",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    description: "The structural foundation of every page on the web."
+  },
+  {
+    icon: "css",
+    label: "CSS3",
+    accent: "#1572B6",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    description: "Styling, layout, and animation for modern, responsive interfaces."
+  },
+  {
+    icon: "tailwind",
+    label: "Tailwind CSS",
+    accent: "#38BDF8",
+    link: "https://tailwindcss.com/",
+    description: "A utility-first CSS framework for building custom designs quickly."
+  },
+  {
+    icon: "node",
+    label: "Node.js",
+    accent: "#3C873A",
+    link: "https://nodejs.org/",
+    description: "A JavaScript runtime for building fast, scalable backend services."
+  },
+  {
+    icon: "postgres",
+    label: "PostgreSQL",
+    accent: "#336791",
+    link: "https://www.postgresql.org/",
+    description: "A reliable, feature-rich relational database for production apps."
+  },
+  {
+    icon: "git",
+    label: "Git",
+    accent: "#F05032",
+    link: "https://git-scm.com/",
+    description: "Version control for tracking changes and collaborating with teams."
+  },
+  {
+    icon: "firebase",
+    label: "Firebase",
+    accent: "#FFCA28",
+    link: "https://firebase.google.com/",
+    description: "A cloud platform for authentication, databases, and hosting."
+  },
+  {
+    icon: "figma",
+    label: "Figma",
+    accent: "#A259FF",
+    link: "https://www.figma.com/",
+    description: "Design and prototyping tool used for UI/UX exploration."
   }
-
 ];
 export const projects = [
 
