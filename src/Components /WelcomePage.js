@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import PastWork from "./PastWork";
 import { describeLine } from "../data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 
 import "../styles/WelcomePage.css";
@@ -63,6 +63,10 @@ const WelcomePage = () => {
             </a>
           ))}
         </div>
+
+        <a href="#past-work" className="scroll-cue" aria-label="Scroll down to see my work">
+          <FontAwesomeIcon icon={faChevronDown} />
+        </a>
       </section>
 
       <div className="navigation-component">

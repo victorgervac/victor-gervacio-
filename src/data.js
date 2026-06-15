@@ -115,8 +115,8 @@ export const projects = [
     imageUrl: [condoLogin,profileEdit,dashboard,reservations],
     description: 
     `A full-stack <strong>Ruby on Rails</strong> application built to streamline property management workflows for short-term rentals. The platform integrates with the <strong>Hostaway API</strong> to fetch and sync real-time listings, reservations to construct expenses and cleaning tasks. Provides CRUD operations and Dynamically calculates weekly performance trends and changes in activity across key metrics.`,
-    frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>PostgreSQ</strong> "," <strong>Tailwind</strong>","<strong>Stimulus.js</strong>"],
-    backTechStack:["<strong>Hostaway API </strong>"],
+    frontTechSatck: ["Ruby on Rails", "PostgreSQL", "Tailwind CSS", "Stimulus.js"],
+    backTechStack: ["Hostaway API"],
     subTitle: 'Property and expense tracker',
     link: `/`
   },
@@ -127,8 +127,8 @@ export const projects = [
     imageUrl: [aceApps,aceProj,aceTerm,],
     description: 
     `ACEapps is a custom non-profit contract management suite of applications including reimbursement tracking, time tracking, invoicing, contract management, project management, and scheduling. Built with Rails, Tailwind, and JavaScript, along with other <strong> Rails gems including Stimulus</strong> and many more, it renders a cluster of <strong> Rails </strong> applications with user-friendly integrations that support thousands of users for ACE's mission.`,
-    frontTechSatck: ["<strong>Ruby on Rails</strong> ", "<strong>Javascript</strong> "," <strong>Tailwind</strong>"],
-    backTechStack:["<strong>Ruby on Rail</strong>", "<strong>SQL</strong>"],
+    frontTechSatck: ["Ruby on Rails", "JavaScript", "Tailwind CSS"],
+    backTechStack: ["Ruby on Rails", "PostgreSQL"],
     subTitle: 'American Conservation Experience',
     link: `https://projects.usaconservation.org/`
   }, 
@@ -140,8 +140,8 @@ export const projects = [
     `I have created a <strong>frontend</strong> clone to the Amazon store to test out my <strong>React</strong> developer skills,
     while writing <strong>JSX</strong>. Follow the link to open the app,
     and login with a google account. While being protected by google's <strong>firebase</strong> cloud <strong>database</strong>.`,
-    frontTechSatck: ["<strong>React</strong> ", " <strong>Styled Components</strong> ", " <strong>Yarn</strong> "],
-    backTechStack:["<strong>Firebase</strong>"],
+    frontTechSatck: ["React", "Styled Components", "Yarn"],
+    backTechStack: ["Firebase"],
     subTitle: 'Amazone React Clone',
     link: `https://clone-9de46.web.app/`
   },
@@ -153,8 +153,8 @@ export const projects = [
     `
     This app was created as an end-of-year project for my University of Utah coding boot camp. In an agile environment with two teammates and myself, I consider this to be the  <strong>ultimate TODO list</strong>. With a <strong>React</strong> frontend and a <strong>Ruby on Rails</strong> backend, this app will help you organize your job search. 
     This app was created with the following techonologies.`,
-    frontTechSatck: [" <strong>React</strong> "," <strong>Device<strong>","  <strong>Yarn<strong> "],
-    backTechStack:["<strong>Ruby On Rails</strong> ", " <strong>PostgresQL</strong>"],
+    frontTechSatck: ["React", "Yarn"],
+    backTechStack: ["Ruby on Rails", "PostgreSQL"],
     subTitle: 'DevTracker React/Ruby Application',
     link:"",
   },

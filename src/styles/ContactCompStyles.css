@@ -29,6 +29,25 @@
   font-weight: bold;
 }
 
+.contact-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s;
+}
+
+.contact-fade.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-fade {
+    opacity: 1;
+    transform: none;
+    transition: color 0.5s;
+  }
+}
+
 @media screen and (max-width: 500px) {
   /* .link-wrap{
     margin-left: 2rem;
