@@ -18,20 +18,29 @@ html {
 
 .landing-content {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: center; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   min-height: 100vh;
   position: relative;
+  padding: 2rem;
+  gap: 2rem;
+  overflow: hidden;
 }
 
-.text-section,
-.animated-person {
-  flex: 1; 
+.text-section {
+  flex: 1;
   min-width: 300px;
   padding: 1rem;
 }
 
+.animated-person {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
 
 .landing-image {
   width: 100%;
@@ -39,139 +48,159 @@ html {
   height: auto;
 }
 
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
 .hello-line {
-  font-size: 3rem;
-  font-weight: 600;
-  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
   color: #ffffff;
-}
-
-.dev-line {
-  font-size: 2rem;
-  margin: 1rem 0;
-  color: var(--accent-color, #00d4ff);
-}
-
-.describe-line {
-  font-size: 1.25rem;
-  color: #cccccc;
-  margin-top: 1rem;
-  max-width: 600px;
+  line-height: 1.1;
 }
 
 .highlighted-name {
-  color: var(--highlight-color, #ff8c00);
+  color: var(--name-landing-color);
+  display: inline-block;
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-  text-align: center;
+.dev-line {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 0.75rem 0;
+  color: var(--turquoise-color);
+  font-weight: 500;
+  line-height: 1.3;
 }
 
-.scroll-indicator a {
-  text-decoration: none;
-  color: inherit;
+.dev-line strong {
+  color: var(--turquoise-color);
 }
 
-.chevron {
-  width: 28px;
-  height: 8px;
-  background: white;
-  margin: 5px auto;
-  opacity: 0.5;
-  animation: move 2s ease-out infinite;
-}
-
-.scroll-text {
-  display: block;
+.describe-line {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--quick-silver-color);
   margin-top: 1rem;
-  font-size: 0.75rem;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.describe-line strong {
+  color: var(--white-color);
+}
+
+/* ============================================================
+   FLY-IN KEYFRAMES  — each element has its own origin
+   ============================================================ */
+
+/* Greeting: slides in from LEFT */
+@keyframes flyFromLeft {
+  0%   { opacity: 0; transform: translateX(-80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Title: drops DOWN from above */
+@keyframes flyFromTop {
+  0%   { opacity: 0; transform: translateY(-60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Description: rises UP from below */
+@keyframes flyFromBottom {
+  0%   { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* SVG character: sweeps in from RIGHT with slight overshoot */
+@keyframes flyFromRight {
+  0%   { opacity: 0; transform: translateX(100px) scale(0.96); }
+  70%  { opacity: 1; transform: translateX(-8px) scale(1.01); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* Icons: pop up with a spring */
+@keyframes popUp {
+  0%   { opacity: 0; transform: translateY(30px) scale(0.7); }
+  60%  { opacity: 1; transform: translateY(-6px) scale(1.08); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Name highlight: color pulse after it lands */
+@keyframes namePulse {
+  0%   { opacity: 0; transform: translateX(-80px); }
+  70%  { opacity: 1; transform: translateX(0); }
+  80%  { text-shadow: 0 0 20px var(--name-landing-color); }
+  100% { opacity: 1; transform: translateX(0); text-shadow: none; }
+}
+
+/* Shared base — starts invisible, fills forward */
+.fly-in {
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: 0.75s;
+}
+
+/* Element-specific animations */
+.fly-greeting        { animation-name: flyFromLeft;   animation-delay: 0.05s; }
+.fly-name            { animation-name: namePulse;     animation-delay: 0.15s; }
+.fly-title           { animation-name: flyFromTop;    animation-delay: 0.30s; }
+.fly-description     { animation-name: flyFromBottom; animation-delay: 0.50s; }
+.fly-person          { animation-name: flyFromRight;  animation-delay: 0.20s; animation-duration: 0.9s; }
+.fly-icon-1          { animation-name: popUp;         animation-delay: 0.70s; animation-duration: 0.6s; }
+.fly-icon-2          { animation-name: popUp;         animation-delay: 0.82s; animation-duration: 0.6s; }
+.fly-icon-3          { animation-name: popUp;         animation-delay: 0.94s; animation-duration: 0.6s; }
+.fly-icon-4          { animation-name: popUp;         animation-delay: 1.06s; animation-duration: 0.6s; }
+
+/* ============================================================
+   SOCIAL ICON ROW
+   ============================================================ */
+
+.icon-container {
+  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
   color: #ffffff;
   opacity: 0.6;
 }
 
-@keyframes move {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Section Styling */
-.section {
-  margin: 4rem 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .landing-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-section {
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hello-line {
-    font-size: 2.5rem;
-  }
-  .dev-line {
-    font-size: 1.5rem;
-  }
-  .describe-line {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-@keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-fade {
-  opacity: 0;
-  animation: fadeSlideUp 0.7s ease-out forwards;
-}
-
 .social-icon {
-  display: inline-block;
-  transition: transform 0.25s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  transition: transform 0.25s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .social-icon:hover {
-  transform: scale(1.25) rotate(8deg);
+  color: var(--turquoise-color);
+  transform: scale(1.3) rotate(8deg);
+  opacity: 1;
 }
+
+/* ============================================================
+   SCROLL CUE
+   ============================================================ */
 
 .scroll-cue {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   color: var(--quick-silver-color);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-decoration: none;
   opacity: 0;
   transition: color 0.2s ease;
   animation:
-    fadeIn 0.7s ease-out 0.9s forwards,
-    bounce 2s ease-in-out 1.6s infinite;
+    fadeIn 0.6s ease-out 1.3s forwards,
+    bounce 2.2s ease-in-out 1.9s infinite;
 }
 
 .scroll-cue:hover {
@@ -180,68 +209,17 @@ html {
 
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+  50%       { transform: translateX(-50%) translateY(9px); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-fade {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .social-icon:hover {
-    transform: none;
-  }
-
-  .scroll-cue {
-    animation: fadeIn 0.7s ease-out 0.9s forwards;
-  }
-}
-
-@keyframes moveDown {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(10px);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.chevrons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-}
-
-.chevrons svg {
-  animation: moveDown 1.5s infinite;
-}
-
-.chevrons svg:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.chevrons svg:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.chevrons svg:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
+/* ============================================================
+   SVG CHARACTER IDLE ANIMATIONS (unchanged)
+   ============================================================ */
 
 .animated-person #head {
   animation: nod 2s infinite ease-in-out;
@@ -257,20 +235,19 @@ html {
   animation: glow 1s infinite alternate;
 }
 
-/* Animations */
 @keyframes nod {
   0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(3deg); }
+  50%       { transform: rotate(3deg); }
 }
 
 @keyframes tap {
   0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(2deg); }
+  50%       { transform: rotate(2deg); }
 }
 
 @keyframes glow {
   from { fill: #999; }
-  to { fill: #00f7ff; }
+  to   { fill: #00f7ff; }
 }
 
 #desktopSentenceTop,
@@ -282,90 +259,91 @@ html {
   animation-iteration-count: infinite;
 }
 
-#desktopSentenceTop {
-  animation-name: fadeTop;
-}
-
-#desktopSentenceMid {
-  animation-name: fadeMid;
-}
-
-#desktopSentenceLast {
-  animation-name: fadeLast;
-}
+#desktopSentenceTop  { animation-name: fadeTop; }
+#desktopSentenceMid  { animation-name: fadeMid; }
+#desktopSentenceLast { animation-name: fadeLast; }
 
 @keyframes fadeTop {
-  0%, 20% { opacity: 1; }
+  0%, 20%   { opacity: 1; }
   25%, 100% { opacity: 0; }
 }
 
 @keyframes fadeMid {
-  0%, 20% { opacity: 0; }
+  0%, 20%  { opacity: 0; }
   25%, 45% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+  50%, 100%{ opacity: 0; }
 }
 
 @keyframes fadeLast {
   0%, 45% { opacity: 0; }
-  50%, 70% { opacity: 1; }
-  75%, 100% { opacity: 0; }
+  50%, 70%{ opacity: 1; }
+  75%, 100%{ opacity: 0; }
 }
 
-
-#laptopscreen{
-  animation: fadeinout  5s infinite;
- 
-}
-@keyframes movement {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-   transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
+#laptopscreen {
+  animation: fadeinout 5s infinite;
 }
 
 @keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
 }
 
-.icon-container {
-  flex-basis: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  color:#ffffff;
-  opacity: .5;
+/* ============================================================
+   SECTION SPACING
+   ============================================================ */
+
+.section {
+  margin: 4rem 2rem;
 }
 
-.icon-container a {
-  /* Makes the icon adopt the color of its container */
-  color: inherit; 
-  
-  /* Removes the default link underline */
-  text-decoration: none; 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 
-  /* Adds some space horizontally between the icons */
-  margin: 0 0.75rem; 
+@media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
 
-  /* Smooth transition for the hover color */
-  transition: color 0.2s ease-in-out;
-
-  /* Set the icon font size */
-  font-size: 2rem; /* Adjust size as needed */
+  .describe-line {
+    margin: 0 auto;
+  }
 }
 
-/* Change color on hover for better user feedback */
-.icon-container a:hover {
-  color: #007bff; /* Change this to your preferred highlight color */
+@media (max-width: 480px) {
+  .hello-line { font-size: 2rem; }
+  .dev-line   { font-size: 1.3rem; }
+  .describe-line { font-size: 1rem; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .fly-in,
+  .fly-greeting,
+  .fly-name,
+  .fly-title,
+  .fly-description,
+  .fly-person,
+  .fly-icon-1,
+  .fly-icon-2,
+  .fly-icon-3,
+  .fly-icon-4 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .scroll-cue {
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  .social-icon:hover {
+    transform: none;
+  }
 }
