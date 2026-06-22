@@ -15,10 +15,9 @@ import dashboard from "./assets/images/dashboard.png"
 import reservations from "./assets/images/reservations.png"
 
 export const describeLine=`
-  who seeks the challenge of <strong>solving</strong> real world problems 
-  through coding in a team environment. Interested in all areas of
-  <strong>development</strong> including application 
-  <strong>front and back end</strong> work as well as <strong>testing</strong> and performance.
+  who builds tools that <strong>eliminate manual work</strong>  from automating rental operations across 10 properties
+  to shipping full-stack Rails applications used many users. I care about clean code, real business outcomes,
+  and systems that <strong>keep running when you're not watching</strong>.
 `
 
 export const techStack = [
@@ -111,25 +110,38 @@ export const projects = [
 
   {
     id: 5,
-    title: "Property Operations Dashboard" , 
-    imageUrl: [condoLogin,profileEdit,dashboard,reservations],
-    description: 
-    `A full-stack <strong>Ruby on Rails</strong> application built to streamline property management workflows for short-term rentals. The platform integrates with the <strong>Hostaway API</strong> to fetch and sync real-time listings, reservations to construct expenses and cleaning tasks. Provides CRUD operations and Dynamically calculates weekly performance trends and changes in activity across key metrics.`,
+    title: "Property Operations Dashboard",
+    imageUrl: [condoLogin, profileEdit, dashboard, reservations],
+    impact: [
+      "Manages operations across <strong>short-term rental properties</strong>",
+      "Automated syncing of reservations, cleaning schedules, and expenses from <strong>Hostaway API</strong>",
+      "Scripts analyze <strong>historical booking patterns</strong> to surface peak demand windows",
+      "Automated <strong>mass SMS notifications</strong> to guests and cleaning crews",
+      "Replaced hours of manual data entry with a <strong>single dashboard view</strong>",
+    ],
+    description:
+      `Built to eliminate manual operations for a short-term rental portfolio. The platform pulls live reservation and listing data from the <strong>Hostaway API</strong>, syncs it to a PostgreSQL database, and runs background scripts that analyze past booking dates to identify when guests are most likely to book. Cleaning schedules are generated automatically from incoming reservations, and <strong>mass SMS scripts</strong> notify crews without any manual work. The result: a single dashboard that replaces spreadsheets, group texts, and manual calendar checks across 10 properties.`,
     frontTechSatck: ["Ruby on Rails", "PostgreSQL", "Tailwind CSS", "Stimulus.js"],
     backTechStack: ["Hostaway API"],
-    subTitle: 'Property and expense tracker',
+    subTitle: "Short-term rental automation ",
     link: `/`
   },
   
   {
     id: 3,
-    title: "ACE Apps" , 
-    imageUrl: [aceApps,aceProj,aceTerm,],
-    description: 
-    `ACEapps is a custom non-profit contract management suite of applications including reimbursement tracking, time tracking, invoicing, contract management, project management, and scheduling. Built with Rails, Tailwind, and JavaScript, along with other <strong> Rails gems including Stimulus</strong> and many more, it renders a cluster of <strong> Rails </strong> applications with user-friendly integrations that support thousands of users for ACE's mission.`,
+    title: "ACE Apps",
+    imageUrl: [aceApps, aceProj, aceTerm],
+    impact: [
+      "Used by <strong>hundreds of conservation corps members</strong> across the US",
+      "Replaced paper-based processes for <strong>contract management, invoicing, and time tracking</strong>",
+      "Modular suite of Rails apps sharing a unified auth and data layer",
+      "Integrated <strong>reimbursement tracking and scheduling</strong> for field crews",
+    ],
+    description:
+      `ACEapps is a custom non-profit contract management suite built for <strong>American Conservation Experience</strong>, supporting users. The platform covers reimbursement tracking, time tracking, invoicing, contract management, project management, and crew scheduling  all built with <strong>Ruby on Rails</strong>, Tailwind, Stimulus, and a shared PostgreSQL backend. I worked on features that directly reduced administrative burden for field teams managing conservation projects across the country.`,
     frontTechSatck: ["Ruby on Rails", "JavaScript", "Tailwind CSS"],
     backTechStack: ["Ruby on Rails", "PostgreSQL"],
-    subTitle: 'American Conservation Experience',
+    subTitle: "American Conservation Experience ",
     link: `https://projects.usaconservation.org/`
   }, 
   {
@@ -147,23 +159,20 @@ export const projects = [
   },
   {
     id: 1,
-    title: "DevTracker" , 
-    imageUrl: [devtracker,devLogin,devWelcome,devSignin],
-    description: 
-    `
-    This app was created as an end-of-year project for my University of Utah coding boot camp. In an agile environment with two teammates and myself, I consider this to be the  <strong>ultimate TODO list</strong>. With a <strong>React</strong> frontend and a <strong>Ruby on Rails</strong> backend, this app will help you organize your job search. 
-    This app was created with the following techonologies.`,
+    title: "DevTracker",
+    imageUrl: [devtracker, devLogin, devWelcome, devSignin],
+    impact: [
+      "Built in an <strong>agile team of 3</strong> as a capstone project",
+      "Full-stack with <strong>React frontend + Rails API backend</strong>",
+      "Tracks job applications, contacts, and follow-up tasks in one place",
+    ],
+    description:
+      `A job search management app built as a capstone at the University of Utah coding bootcamp. Working in an agile team of three, we designed and shipped a full-stack application with a <strong>React</strong> frontend and <strong>Ruby on Rails</strong> API backend giving job seekers one organized place to track applications, contacts, and next steps.`,
     frontTechSatck: ["React", "Yarn"],
     backTechStack: ["Ruby on Rails", "PostgreSQL"],
-    subTitle: 'DevTracker React/Ruby Application',
-    link:"",
+    subTitle: "Job search tracker  University of Utah capstone",
+    link: "",
   },
-
-//   {
-//     id: 3,
-//     title: "Breaking Bad Type Ahead",
-//     imageUrl: 
-//   }
 ]
 export const githubDescription =` 
 My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>, <strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React and Swift. Using an API call, I’ve fetched and created this carousel to display my repositories and GitHub activity.
@@ -178,3 +187,15 @@ export const aboutMe = `
 
 <p>I've participated in several <strong>leadership conferences</strong> and am always seeking ways to grow both personally and professionally. My technical interests span across <strong>front-end and back-end development</strong>, along with a focus on <strong>testing</strong> and <strong>performance optimization</strong>.</p>
 `
+
+// ─── ADDITIONAL EXPORTS ───────────────────────────────────────────────
+export const cybersecurity = {
+  title: "Google Cybersecurity Certificate",
+  status: "In Progress ",
+  skills: [
+    "Reading and analyzing TCP dumps",
+    "SQL queries for log analysis and threat hunting",
+    "Linux file permission management",
+    "Network security fundamentals",
+  ],
+};

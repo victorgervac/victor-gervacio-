@@ -87,6 +87,14 @@ const ProjectCard = ({ project, fromLeft }) => {
           </h4>
           <div className="subtitle">{project.subTitle}</div>
 
+          {project.impact && project.impact.length > 0 && (
+            <ul className="impact-list">
+              {project.impact.map((item, i) => (
+                <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+              ))}
+            </ul>
+          )}
+
           <div
             className="description"
             dangerouslySetInnerHTML={{ __html: project.description }}

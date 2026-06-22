@@ -279,3 +279,34 @@
   border-radius: 999px;
 }
 
+/* ========== IMPACT BULLETS ========== */
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.impact-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--description-words-color);
+  line-height: 1.5;
+}
+
+.impact-list li::before {
+  content: "▸";
+  color: var(--turquoise-color);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.impact-list li strong {
+  color: var(--strong-color);
+}
+
