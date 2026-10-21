@@ -1,263 +1,308 @@
-/* ============================================================
-   GitHub Section
-   ============================================================ */
-
 .github-section {
-  padding: 4rem 2rem 5rem;
+  --gh-surface: rgba(255, 255, 255, 0.04);
+  --gh-surface-hover: rgba(255, 255, 255, 0.08);
+  --gh-border: rgba(255, 255, 255, 0.1);
+  --gh-muted: #8b949e;
+  --gh-accent: var(--button-color);
+
   max-width: 1100px;
   margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  color: var(--white-color);
 }
 
-/* ── Header row ── */
-.github-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+.github-paragraph {
+  max-width: 70ch;
+  margin: 1rem auto 2rem;
+  color: rgba(242, 242, 242, 0.85);
+  line-height: 1.7;
+  text-align: center;
 }
 
-.github-section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin: 0;
-}
-
-.github-title-icon {
-  color: var(--turquoise-color, #2fefd0);
-  font-size: 1.8rem;
-}
-
-.github-profile-link {
-  color: var(--turquoise-color, #2fefd0);
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  border: 1px solid var(--turquoise-color, #2fefd0);
-  padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-.github-profile-link:hover {
-  background: var(--turquoise-color, #2fefd0);
-  color: #0a0f1e;
-}
-
-.github-intro {
-  color: #a0aab8;
-  font-size: 0.975rem;
-  line-height: 1.65;
-  margin: 0 0 2rem;
-  max-width: 680px;
-}
-.github-intro strong { color: #ffffff; }
-
-/* ============================================================
-   Repo card grid
-   ============================================================ */
-
-.repos-grid {
+/* Stats */
+.github-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
-/* ── Single repo card ── */
-.repo-card {
+.github-stat {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 12px;
-  padding: 1.1rem 1.25rem 1rem;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.github-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--gh-accent), var(--turquoise-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.github-stat-label {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gh-muted);
+}
+
+/* Repo cards */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 180px;
+  padding: 1.25rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
+  color: var(--white-color);
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease, box-shadow 0.25s ease;
+}
 
-  /* scroll-reveal start state */
+.repo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gh-accent), var(--turquoise-color));
   opacity: 0;
-  transform: translateY(18px);
+  transition: opacity 0.25s ease;
 }
 
-.repo-card.in-view {
-  animation: repoReveal 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+a.repo-card:hover {
+  transform: translateY(-4px);
+  background: var(--gh-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  color: var(--white-color);
 }
 
-@keyframes repoReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+a.repo-card:hover::before {
+  opacity: 1;
 }
 
-.repo-card:hover {
-  border-color: var(--turquoise-color, #2fefd0);
-  background: rgba(47, 239, 208, 0.06);
-  transform: translateY(-3px);
-}
-
-/* ── Card header ── */
 .repo-card-header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+}
+
+.repo-icon,
+.repo-external {
+  color: var(--gh-muted);
+}
+
+.repo-external {
+  margin-left: auto !important;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+a.repo-card:hover .repo-external {
+  opacity: 1;
 }
 
 .repo-name {
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: #e6edf3;
-  word-break: break-word;
-  line-height: 1.3;
+  color: var(--turquoise-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.repo-ext-icon {
-  color: #5a6478;
-  font-size: 0.7rem;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-  transition: color 0.2s;
-}
-.repo-card:hover .repo-ext-icon {
-  color: var(--turquoise-color, #2fefd0);
-}
-
-/* ── Description ── */
-.repo-desc {
-  font-size: 0.82rem;
-  color: #7d8694;
-  line-height: 1.55;
+.repo-description {
   flex: 1;
-  margin: 0 0 0.85rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(242, 242, 242, 0.75);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* ── Footer row ── */
-.repo-footer {
+.repo-topics {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.4rem;
+}
+
+.repo-topic {
+  padding: 0.15rem 0.6rem;
   font-size: 0.75rem;
-  color: #8b949e;
+  border-radius: 999px;
+  background: rgba(47, 239, 208, 0.12);
+  color: var(--turquoise-color);
 }
 
-.repo-lang {
+.repo-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.3rem;
-  font-weight: 500;
-  color: #c9d1d9;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--gh-muted);
 }
 
-.repo-stat {
-  display: flex;
+.repo-meta-item {
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
-.repo-time {
+.repo-updated {
   margin-left: auto;
-  font-size: 0.72rem;
-  color: #5a6478;
 }
 
-/* ── Skeleton loading ── */
-.repo-skeleton {
-  height: 130px;
-  border-radius: 12px;
+.language-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Skeleton loading */
+.repo-card.skeleton {
+  justify-content: center;
+}
+
+.skeleton-line {
+  height: 12px;
+  width: 80%;
+  border-radius: 6px;
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0.04) 25%,
-    rgba(255,255,255,0.08) 50%,
-    rgba(255,255,255,0.04) 75%
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.05) 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
 }
 
+.skeleton-line.wide {
+  width: 55%;
+  height: 16px;
+}
+
+.skeleton-line.short {
+  width: 35%;
+}
+
 @keyframes shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
 }
 
-/* ── Error state ── */
-.repos-error {
-  color: #8b949e;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 2rem 0;
-}
-.repos-error a {
-  color: var(--turquoise-color, #2fefd0);
-  text-decoration: underline;
+/* Contribution calendar */
+.calendar-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
 }
 
-/* ============================================================
-   Contribution calendar
-   ============================================================ */
-
-.calendar-wrapper {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 1.75rem 2rem;
-}
-
-.calendar-heading {
+.calendar-title {
+  margin: 0 0 1rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #c9d1d9;
-  margin: 0 0 1.25rem;
+  color: var(--white-color);
 }
 
-.calendar-loading {
-  color: #5a6478;
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 1.5rem 0;
+.calendar {
+  color: var(--gh-muted);
+  overflow-x: auto;
 }
 
-.github-calendar-themed text {
-  fill: #8b949e !important;
+.calendar .contrib-legend,
+.calendar text,
+.calendar .contrib-number,
+.calendar .text-muted {
+  color: var(--gh-muted) !important;
+  fill: var(--gh-muted) !important;
 }
 
-/* ============================================================
-   Responsive
-   ============================================================ */
-@media (max-width: 600px) {
+.calendar .contrib-column {
+  border-top-color: var(--gh-border) !important;
+  border-left-color: var(--gh-border) !important;
+}
+
+.calendar .contrib-column:first-child {
+  border-left: none !important;
+}
+
+.calendar .contrib-number {
+  color: var(--white-color) !important;
+}
+
+.calendar .float-right,
+.calendar .contrib-footer {
+  font-size: 0.75rem;
+}
+
+/* CTA */
+.github-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.github-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: var(--gh-accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(227, 27, 109, 0.4);
+}
+
+@media only screen and (max-width: 600px) {
   .github-section {
-    padding: 3rem 1rem 4rem;
+    padding: 1rem 1rem 2rem;
   }
-  .repos-grid {
-    grid-template-columns: 1fr;
-  }
-  .calendar-wrapper {
-    padding: 1.25rem 1rem;
-  }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .repo-card,
-  .repo-card.in-view {
-    animation: none;
-    opacity: 1;
-    transform: none;
+  .github-stats {
+    gap: 0.5rem;
   }
-  .repo-skeleton {
-    animation: none;
+
+  .github-stat-value {
+    font-size: 1.5rem;
   }
 }

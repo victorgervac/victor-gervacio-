@@ -1,36 +1,28 @@
-import React, { useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import toast from "react-hot-toast";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import "../styles/Github.css";
-import GithubCard from "./GithubCard";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { Icon } from "semantic-ui-react";
+import toast from "react-hot-toast";
+import "../styles/Github.css";
+import "github-calendar/dist/github-calendar-responsive.css";
+import GitHubCalendar from "github-calendar";
+import GithubCard, { GithubCardSkeleton } from "./GithubCard";
+import { githubDescription } from "../data";
+
 const USERNAME = "victorgervac";
+
+function createMarkup(markup) {
+  return { __html: markup };
+}
+
 const Github = () => {
-  const [repos, setRepos] = useRef([]);
-  const [loading, setLoading] = useRef(true);
   const calendarRef = useRef(null);
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const link = document.createElement("link");
-    link.rel  = "stylesheet";
-    link.href = "https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css";
-    document.head.appendChild(link);
-
-    const script = document.createElement("script");
-    script.src   = "https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js";
-    script.async = true;
-    script.onload = () => {
-      if (calendarRef.current && typeof window.GitHubCalendar === "function") {
-        window.GitHubCalendar(calendarRef.current, "victorgervac", { responsive: true });
-      }
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) document.body.removeChild(script);
-    };
+    if (calendarRef.current) {
+      GitHubCalendar(calendarRef.current, USERNAME, { responsive: true });
+    }
   }, []);
 
   useEffect(() => {
@@ -57,36 +49,60 @@ const Github = () => {
     .size;
 
   return (
-    <section id="github" className="github-section">
-      <div className="github-section-header">
-        <h2 className="github-section-title">
-          <FontAwesomeIcon icon={faGithub} className="github-title-icon" />
-          GitHub
-        </h2>
-        <a
-          href="https://github.com/victorgervac"
-          target="_blank"
-          rel="noreferrer"
-          className="github-profile-link"
-        >
-          @victorgervac
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{ marginLeft: "0.4rem", fontSize: "0.72rem" }} />
-        </a>
+    <section className="github-section">
+      <a
+        className="component-header github"
+        href={`https://github.com/${USERNAME}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon name="github" /> GitHub
+      </a>
+
+      <div
+        className="github-paragraph"
+        dangerouslySetInnerHTML={createMarkup(githubDescription)}
+      />
+
+      <div className="github-stats">
+        <div className="github-stat">
+          <span className="github-stat-value">{loading ? "–" : repos.length}</span>
+          <span className="github-stat-label">Repositories</span>
+        </div>
+        <div className="github-stat">
+          <span className="github-stat-value">{loading ? "–" : totalStars}</span>
+          <span className="github-stat-label">Stars</span>
+        </div>
+        <div className="github-stat">
+          <span className="github-stat-value">{loading ? "–" : languageCount}</span>
+          <span className="github-stat-label">Languages</span>
+        </div>
       </div>
 
-      <p className="github-intro">
-        My repositories span <strong>Ruby on Rails</strong>, <strong>React</strong>,{" "}
-        <strong>JavaScript</strong>, and <strong>Python</strong> — from production
-        property-management tools to scripting experiments. Click any card to explore.
-      </p>
+      <div className="repo-grid">
+        {loading
+          ? Array.from({ length: 6 }, (_, i) => <GithubCardSkeleton key={i} />)
+          : repos.slice(0, 9).map((repo) => (
+              <GithubCard key={repo.id} repo={repo} />
+            ))}
+      </div>
 
-      <GithubCard />
-
-      <div className="calendar-wrapper">
-        <h3 className="calendar-heading">Contribution Activity</h3>
-        <div ref={calendarRef} className="calendar github-calendar-themed">
-          <div className="calendar-loading">Loading activity…</div>
+      <div className="calendar-panel">
+        <h3 className="calendar-title">Contribution activity</h3>
+        <div className="calendar" ref={calendarRef}>
+          Loading contributions…
         </div>
+      </div>
+
+      <div className="github-cta-wrapper">
+        <a
+          className="github-cta"
+          href={`https://github.com/${USERNAME}?tab=repositories`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View all repositories <Icon name="arrow right" />
+        </a>
       </div>
     </section>
   );
