@@ -1,99 +1,308 @@
-.calendar-days {
-  background-color: #333;
-  color: white;
-  height: auto;
-  width: 180px;
-  padding: 1rem;
-  margin: 0;
-  text-decoration: none;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  flex: 0 0 180px; 
-  box-sizing: border-box;
-}
+.github-section {
+  --gh-surface: rgba(255, 255, 255, 0.04);
+  --gh-surface-hover: rgba(255, 255, 255, 0.08);
+  --gh-border: rgba(255, 255, 255, 0.1);
+  --gh-muted: #8b949e;
+  --gh-accent: var(--button-color);
 
-.sub-card {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.sub-tittle {
-  color: #555;
-  font-size: 0.85em;
-  margin-bottom: 0.5rem;
-}
-
-.primary-button {
-  margin-top: 1rem;
-  background-color: var(--button-color);
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.primary-button:hover {
-  background-color: var(--button-color);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  color: var(--white-color);
 }
 
 .github-paragraph {
-  margin-top: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  max-width: 70ch;
+  margin: 1rem auto 2rem;
+  color: rgba(242, 242, 242, 0.85);
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Stats */
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   margin-bottom: 2rem;
-  color: #fff;
-  font-weight: 400;
-  line-height: 1.43;
-  letter-spacing: 0.01071em;
 }
 
-.scrolling-wrapper {
+.github-stat {
   display: flex;
-  overflow-x: auto;
-  padding: 1rem;
-  gap: 1rem; /* Controls spacing between cards */
-  scroll-snap-type: x mandatory;
-  margin: 2rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
 }
 
-.scrolling-wrapper > * {
-  scroll-snap-align: start;
-}
-.scrolling-wrapper::-webkit-scrollbar {
-  height: 8px;
-}
-.scrolling-wrapper::-webkit-scrollbar-thumb {
-  background-color: #007acc;
-  border-radius: 4px;
-}
-.scrolling-wrapper::-webkit-scrollbar-track {
-  background: #222;
+.github-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--gh-accent), var(--turquoise-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
+.github-stat-label {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gh-muted);
+}
 
+/* Repo cards */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
 
-@media only screen and (min-width: 730px) {
-  .paragraph-cards{
-    display: flex;
-    flex-direction: row;
+.repo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 180px;
+  padding: 1.25rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
+  color: var(--white-color);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.repo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gh-accent), var(--turquoise-color));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+a.repo-card:hover {
+  transform: translateY(-4px);
+  background: var(--gh-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  color: var(--white-color);
+}
+
+a.repo-card:hover::before {
+  opacity: 1;
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.repo-icon,
+.repo-external {
+  color: var(--gh-muted);
+}
+
+.repo-external {
+  margin-left: auto !important;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+a.repo-card:hover .repo-external {
+  opacity: 1;
+}
+
+.repo-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--turquoise-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repo-description {
+  flex: 1;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(242, 242, 242, 0.75);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.repo-topic {
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(47, 239, 208, 0.12);
+  color: var(--turquoise-color);
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--gh-muted);
+}
+
+.repo-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.repo-updated {
+  margin-left: auto;
+}
+
+.language-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Skeleton loading */
+.repo-card.skeleton {
+  justify-content: center;
+}
+
+.skeleton-line {
+  height: 12px;
+  width: 80%;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-line.wide {
+  width: 55%;
+  height: 16px;
+}
+
+.skeleton-line.short {
+  width: 35%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
   }
 }
 
+/* Contribution calendar */
+.calendar-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--gh-surface);
+  border: 1px solid var(--gh-border);
+  border-radius: 16px;
+}
 
+.calendar-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-color);
+}
 
+.calendar {
+  color: var(--gh-muted);
+  overflow-x: auto;
+}
 
+.calendar .contrib-legend,
+.calendar text,
+.calendar .contrib-number,
+.calendar .text-muted {
+  color: var(--gh-muted) !important;
+  fill: var(--gh-muted) !important;
+}
 
+.calendar .contrib-column {
+  border-top-color: var(--gh-border) !important;
+  border-left-color: var(--gh-border) !important;
+}
+
+.calendar .contrib-column:first-child {
+  border-left: none !important;
+}
+
+.calendar .contrib-number {
+  color: var(--white-color) !important;
+}
+
+.calendar .float-right,
+.calendar .contrib-footer {
+  font-size: 0.75rem;
+}
+
+/* CTA */
+.github-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.github-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: var(--gh-accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(227, 27, 109, 0.4);
+}
+
+@media only screen and (max-width: 600px) {
+  .github-section {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .github-stats {
+    gap: 0.5rem;
+  }
+
+  .github-stat-value {
+    font-size: 1.5rem;
+  }
+}

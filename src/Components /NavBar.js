@@ -16,7 +16,7 @@ const NavBar = () => {
       <div className={`nav-links ${menuOpen ? "show" : ""}`}>
         <a href="#svg-id" className="nav-link">Victor</a>
         <a href="#past-work" className="nav-link">Work</a>
-        <a href="#github" className="nav-link">Github</a>
+        <a href="#github" className="nav-link">GitHub</a>
         <a href="#about-id" className="nav-link">About</a>
         <a href="#contact-id" className="nav-link">Contact</a>
       </div>

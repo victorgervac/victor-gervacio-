@@ -175,27 +175,34 @@ export const projects = [
   },
 ]
 export const githubDescription =` 
-My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>, <strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React and Swift. Using an API call, I’ve fetched and created this carousel to display my repositories and GitHub activity.
-Explore more on my GitHub!
+My <strong>GitHub</strong> showcases repositories from both current and past projects. These repositories feature a variety of programming languages including <strong>Ruby</strong>, <strong>JavaScript</strong> and <strong>Python</strong>, as well as frameworks like Ruby on Rails, React and Swift. Below are my most recently updated repositories, pulled live from the GitHub API, along with my contribution activity.
 `
 export const aboutMe = `
-<p>Hello, I'm Victor! I am a <strong>full-stack software developer</strong> certified by the University of Utah.</p> 
+<p>Hello, I'm Victor! I am a <strong>full-stack software developer</strong> certified by the University of Utah.</p>
 
 <p>I enjoy <strong>solving problems</strong> and working in environments where I can <strong>learn from others</strong> and contribute to building meaningful solutions.</p>
-
-<p>Outside of coding, I’m passionate about the outdoors from <strong>hiking</strong>, <strong>biking</strong>, and <strong>snow sports</strong> to simply exploring nature.</p>
 
 <p>I've participated in several <strong>leadership conferences</strong> and am always seeking ways to grow both personally and professionally. My technical interests span across <strong>front-end and back-end development</strong>, along with a focus on <strong>testing</strong> and <strong>performance optimization</strong>.</p>
 `
 
-// ─── ADDITIONAL EXPORTS ───────────────────────────────────────────────
-export const cybersecurity = {
-  title: "Google Cybersecurity Certificate",
-  status: "In Progress ",
-  skills: [
-    "Reading and analyzing TCP dumps",
-    "SQL queries for log analysis and threat hunting",
-    "Linux file permission management",
-    "Network security fundamentals",
-  ],
-};
+export const aboutFacts = [
+  { icon: "code", label: "Focus", value: "Full-stack development" },
+  { icon: "graduation cap", label: "Education", value: "University of Utah" },
+  { icon: "server", label: "Core stack", value: "Ruby on Rails · React" },
+  { icon: "check circle outline", label: "Interests", value: "Testing & performance" },
+]
+
+export const hobbies = [
+  { icon: "tree", label: "Hiking" },
+  { icon: "bicycle", label: "Biking" },
+  { icon: "snowflake outline", label: "Snow sports" },
+  { icon: "compass outline", label: "Exploring nature" },
+]
+
+export const contactLinks = [
+  { icon: "linkedin", label: "LinkedIn", handle: "victorgervacio", href: "https://www.linkedin.com/in/victorgervacio/" },
+  { icon: "github", label: "GitHub", handle: "victorgervac", href: "https://github.com/victorgervac" },
+  { icon: "stack overflow", label: "Stack Overflow", handle: "itsvic", href: "https://stackoverflow.com/users/19621594/itsvic" },
+]
+
+

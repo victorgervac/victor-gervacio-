@@ -1,4 +1,5 @@
-import { aboutMe, cybersecurity } from "../data";
+import { Icon } from "semantic-ui-react";
+import { aboutMe, aboutFacts, hobbies } from "../data";
 import ContactComponent from "./ContactComponent";
 import { ReactComponent as WholeGuy } from "../assets/images/whole_guy.svg";
 import { useInView } from "../Hooks/useInView";
@@ -12,32 +13,40 @@ const AboutComponent = () => {
   const [aboutRef, inView] = useInView({ threshold: 0.2 });
 
   return (
-    <div
-      className={`connectCard ${inView ? "animate" : ""}`}
-      ref={aboutRef}
-    >
-      <div className="svg-man">
-        <WholeGuy />
-      </div>
-      <div className="content">
-        <h1 className="component-header-connect">About</h1>
-        <div className="about" dangerouslySetInnerHTML={createMarkup(aboutMe)} />
+    <div className={`about-section ${inView ? "animate" : ""}`} ref={aboutRef}>
+      <h1 className="component-header-connect">About</h1>
 
-        {/* Cybersecurity in-progress card */}
-        <div className={`cert-card contact-fade${inView ? " in-view" : ""}`} style={{ transitionDelay: "0.1s" }}>
-          <div className="cert-card-header">
-            <span className="cert-badge">In Progress</span>
-            <strong>{cybersecurity.title}</strong>
-            <small>{cybersecurity.status}</small>
+      <div className="about-layout">
+        <div className="about-visual">
+          <div className="svg-man">
+            <WholeGuy />
           </div>
-          <ul className="cert-skills">
-            {cybersecurity.skills.map((s, i) => (
-              <li key={i}>{s}</li>
+          <div className="hobby-chips">
+            {hobbies.map(({ icon, label }) => (
+              <span key={label} className="hobby-chip">
+                <Icon name={icon} /> {label}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
 
-        <ContactComponent inView={inView} />
+        <div className="about-content">
+          <div className="about" dangerouslySetInnerHTML={createMarkup(aboutMe)} />
+
+          <div className="about-facts">
+            {aboutFacts.map(({ icon, label, value }) => (
+              <div key={label} className="about-fact">
+                <Icon name={icon} className="about-fact-icon" />
+                <div>
+                  <span className="about-fact-label">{label}</span>
+                  <span className="about-fact-value">{value}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <ContactComponent inView={inView} />
+        </div>
       </div>
     </div>
   );
